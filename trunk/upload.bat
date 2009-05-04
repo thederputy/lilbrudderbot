@@ -1,2 +1,7 @@
 @echo off
-nxj Phase1 Phase2 Phase3 Phase4 Phase5 PowerNano
+nxj Phase1
+nxj Phase2
+nxj Phase3
+nxj Phase4
+nxj Phase5
+nxj PowerNano
