@@ -121,11 +121,27 @@ public class ActionHelper {
      * @param distb the distance the right wheel should go in centimeters
      * @param speedb the speed of the right wheel
      */
+
+    /**
+     * <p>This version of <code>MotorGo</code> does not
+     * contain a string output.</p>
+     * @param distc the distance in centimetres for the left wheel to turn
+     * @param speedc the speed of the left wheel
+     * @param distb the distance in centimetres for the right wheel to turn
+     * @param speedb the speed of the right wheel
+     */
     public static void MotorGo(int distc, int speedc, int distb, int speedb) {
         //ActionHelper.Stop(); Stop seems to be making it jitter unpredictably
         ActionHelper.MotorST(distc, speedc, distb, speedb);
     }
-
+    /**
+     * <p>This version of <code>MotorGo</code> has a string output.</p>
+     * @param distc the distance in centimetres for the left wheel to turn
+     * @param speedc the speed of the left wheel
+     * @param distb the distance in centimetres for the right wheel to turn
+     * @param speedb the speed of the right wheel
+     * @param debug the string printed on the screen
+     */
     public static void MotorGo(int distc, int speedc, int distb, int speedb, String debug) {
         System.out.println(debug);
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
