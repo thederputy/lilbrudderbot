@@ -1,2 +1,2 @@
 @echo off
-nxj PowerNano
+nxj PowerNano AHtest
