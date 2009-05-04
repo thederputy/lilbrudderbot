@@ -4,7 +4,12 @@
  */
 import helper.ActionHelper;
 /**
- *
+ * <p>This class is for phase 1.
+ * It does these things:
+ *      - drops off the wave turbine
+ *      - pushes the truck back to the base
+ *      - pushes one of the sattelite levers
+ *      - goes back to base.</p>
  * @author Jacob
  */
 public class Phase1 {
