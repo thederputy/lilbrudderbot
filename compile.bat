@@ -1,2 +1,2 @@
 @echo off
-nxjc PowerNano.java
+nxjc PowerNano.java AHtest.java
