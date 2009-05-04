@@ -114,6 +114,13 @@ public class ActionHelper {
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
     }
 
+    /**
+     * The motion wrapper function
+     * @param distc the distance the left wheel should go in centimeters
+     * @param speedc the speed of the left wheel
+     * @param distb the distance the right wheel should go in centimeters
+     * @param speedb the speed of the right wheel
+     */
     public static void MotorGo(int distc, int speedc, int distb, int speedb) {
         //ActionHelper.Stop(); Stop seems to be making it jitter unpredictably
         ActionHelper.MotorST(distc, speedc, distb, speedb);
