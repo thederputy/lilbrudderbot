@@ -14,10 +14,10 @@ public class Phase3 {
     public static void main(String[] args) {
     int speed = 500;
     //Initially traveling toward oil rig
-    ActionHelper.MotorGo(45, speed, 45, speed, "Heading to Oil Rig");
+    ActionHelper.MotorGo(110, speed, 110, speed, "Heading to Oil Rig");
     //Stopping and waiting for oil barrels
-    ActionHelper.MotorGo(1, 1, 1, 1, "Waiting");
+    ActionHelper.MotorGo(1, 50, 1, 50, "Waiting");
     //Returning to base
-    ActionHelper.MotorGo(-45, speed, -45, speed, "Returning");
+    ActionHelper.MotorGo(-110, speed, -110, speed, "Returning");
     }
 }
