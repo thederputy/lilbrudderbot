@@ -92,7 +92,14 @@ public class ActionHelper {
     //3cm
     //3.97580087233961
     //70.3716754404113
-
+    /**
+     * 
+     * @param degrees positive degrees rotates to the right, negative to the
+     * left
+     * @param speed the speed
+     * @param balance 0 rotates around the right wheel, 0.5 rotates around the
+     * center, and 1 rotates around the left wheel
+     */
     public static void Rotate(int degrees, int speed, double balance) {
         int dist = (int) (70.3716754404113 * (degrees / 360.0));
         int distb = (int) (dist * balance);
