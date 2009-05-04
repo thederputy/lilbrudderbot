@@ -11,9 +11,12 @@ public class AHtest {
     public static void main(String[] args) {
         int speed = 500;
         //turn right and leave base
-        ActionHelper.Rotate(-90, speed, -2.77);
+        ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
         ActionHelper.MotorGo(50, speed, 50, speed, "GO TOWARDS CORN");
+        ActionHelper.Rotate(-45, speed, 0);
+        ActionHelper.MotorGo(6, speed, 6, speed, "GRAB CORN");
+        ActionHelper.Rotate(90 + 45, speed, 0.5);
 //        //turn left
 //        ActionHelper.Rotate(90, speed, 0.5);
 //        ActionHelper.MotorGo(-15, speed, -15, speed, "REVERSE");

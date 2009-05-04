@@ -13,8 +13,8 @@ import lejos.nxt.*;
 public class ActionHelper {
     public static double Translation = 20.45;
     public static int accfactor = 2;
-    public static int maxretries = 2;
-    public static int redfac = 8;
+    public static int maxretries = 3;
+    public static int redfac = 6;
     public static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
