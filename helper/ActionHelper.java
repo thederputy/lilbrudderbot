@@ -93,7 +93,8 @@ public class ActionHelper {
     //3.97580087233961
     //70.3716754404113
     /**
-     * 
+     * <p>This method turns the robot around a point shown in
+     * <code>balance</code>.
      * @param degrees positive degrees rotates to the right, negative to the
      * left
      * @param speed the speed
