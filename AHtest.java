@@ -13,10 +13,10 @@ public class AHtest {
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
-        ActionHelper.MotorGo(50, speed, 50, speed, "GO TOWARDS CORN");
-        ActionHelper.Rotate(-45, speed, 0);
-        ActionHelper.MotorGo(6, speed, 6, speed, "GRAB CORN");
-        ActionHelper.Rotate(90 + 45, speed, 0.5);
+        ActionHelper.MotorGo(48, speed, 48, speed, "GO TOWARDS CORN");
+        ActionHelper.Rotate(-70, speed, 0);
+        ActionHelper.MotorGo(10, speed, 10, speed, "GRAB CORN");
+        ActionHelper.Rotate(90 + 70, speed, 0.2);
 //        //turn left
 //        ActionHelper.Rotate(90, speed, 0.5);
 //        ActionHelper.MotorGo(-15, speed, -15, speed, "REVERSE");
