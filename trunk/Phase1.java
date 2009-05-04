@@ -19,5 +19,7 @@ public class Phase1 {
         ActionHelper.MotorGo(16, speed, 16, speed, "GO OUT FROM BASE");
         //turn left
         ActionHelper.Rotate(-90, speed, 0.5);
+        //go towards the ocean
+        ActionHelper.MotorGo(41, speed, 41, speed, "GO TOWARDS OCEAN");
     }
 }
