@@ -2,8 +2,8 @@
 import helper.ActionHelper;
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * The program will complete phase 3 of the challenge, it will go up to the oil
+ * barrel, wait and retreive the barrels, then return to base.
  */
 
 /**
