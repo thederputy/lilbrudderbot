@@ -1,2 +1,2 @@
 @echo off
-nxj PowerNano AHtest Phase1 Phase3
+nxj Phase1 Phase3 PowerNano AHtest 

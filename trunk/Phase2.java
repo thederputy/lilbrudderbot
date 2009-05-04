@@ -7,7 +7,7 @@ import helper.ActionHelper;
  *
  * @author Austin
  */
-public class AHtest {
+public class Phase2 {
     public static void main(String[] args) {
         int speed = 500;
         //turn right and leave base
