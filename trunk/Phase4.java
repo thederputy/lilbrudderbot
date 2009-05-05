@@ -21,7 +21,7 @@ public class Phase4 {
 
         ActionHelper.Rotate(60, speed, 2.5);
 
-        ActionHelper.MotorGo(20, speed, 20, speed, "GRABBIN' THE DAM!");
+        ActionHelper.MotorGo(20, speed, 20, speed, "RETURNING TO BASE");
         
     }
 
