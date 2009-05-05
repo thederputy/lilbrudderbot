@@ -14,7 +14,13 @@ import helper.ActionHelper;
  */
 public class Phase1 {
     public static void main(String[] args) {
+        /**
+         * <p>The speed of the motor when going forwards and backwards.</p>
+         */
         int speed = 500;
+        /**
+         * <p>The speed of the motor when turning.</p>
+         */
         int turn = 200;
         // go out from base
         ActionHelper.MotorGo(120, speed, 20, speed, "GO OUT FROM BASE");
