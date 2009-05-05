@@ -21,12 +21,15 @@ public class ActionHelper {
         int udistc = (int) (distc * ActionHelper.Translation);
         Motor.B.stop();
         Motor.C.stop();
+        Motor.B.regulateSpeed(true);
+        Motor.C.regulateSpeed(true);
         while (Motor.B.getActualSpeed() != 0 && Motor.C.getActualSpeed() != 0) {
         }
 
         if (numActions == 0) {
             Motor.B.smoothAcceleration(true);
             Motor.C.smoothAcceleration(true);
+            
         } else {
             Motor.B.smoothAcceleration(false);
             Motor.C.smoothAcceleration(false);
