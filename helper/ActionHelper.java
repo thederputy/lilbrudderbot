@@ -15,6 +15,7 @@ public class ActionHelper {
     public static int accfactor = 2;
     public static int maxretries = 3;
     public static int redfac = 6;
+    private static int numActions = 0;
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -22,6 +23,15 @@ public class ActionHelper {
         Motor.C.stop();
         while (Motor.B.getActualSpeed() != 0 && Motor.C.getActualSpeed() != 0) {
         }
+
+        if (numActions == 0) {
+            Motor.B.smoothAcceleration(true);
+            Motor.C.smoothAcceleration(true);
+        } else {
+            Motor.B.smoothAcceleration(false);
+            Motor.C.smoothAcceleration(false);
+        }
+        numActions++;
 
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
