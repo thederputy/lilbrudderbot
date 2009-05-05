@@ -48,18 +48,20 @@ public class ActionHelper {
         while ((
                 Motor.B.getTachoCount() != udistb ||
                 Motor.C.getTachoCount() != udistc) &&
-                (changecountb < ActionHelper.maxretries || changecountc < ActionHelper.maxretries)) {
+                (changecountb < ActionHelper.maxretries ||
+                changecountc < ActionHelper.maxretries)) {
             if ((Motor.B.getTachoCount() * b) >
-                    ((udistb - Motor.B.getError() ) * b) - ActionHelper.accfactor) {
-                if (Motor.B.getTachoCount() == udistb || changecountb > ActionHelper.maxretries - 1) {
+                    ((udistb - Motor.B.getError() ) * b)
+                    - ActionHelper.accfactor) {
+                if (Motor.B.getTachoCount() == udistb ||
+                        changecountb > ActionHelper.maxretries - 1) {
                     Motor.B.stop();
                     changecountb = ActionHelper.maxretries + 1;
                 } else {
                     b = ((udistb - Motor.B.getTachoCount() > 0)?(1):(-1));
-                    System.out.println("B FAIL: " + changecountb + " DIR " + b);
                     changecountb++;
-                    
-                    Motor.B.setSpeed(speedb / (changecountb * ActionHelper.redfac));
+                    Motor.B.setSpeed(speedb /
+                            (changecountb * ActionHelper.redfac));
                     if (b == 1) {
                         Motor.B.forward();
                     } else {
@@ -68,15 +70,17 @@ public class ActionHelper {
                 }
             }
             if ((Motor.C.getTachoCount() * c) >
-                    ((udistc - Motor.C.getError()) * c) - ActionHelper.accfactor) {
-                if (Motor.C.getTachoCount() == udistc || changecountc > ActionHelper.maxretries - 1) {
+                    ((udistc - Motor.C.getError()) * c)
+                    - ActionHelper.accfactor) {
+                if (Motor.C.getTachoCount() == udistc ||
+                        changecountc > ActionHelper.maxretries - 1) {
                     Motor.C.stop();
                     changecountc = ActionHelper.maxretries + 1;
                 } else {
                     c = ((udistc - Motor.C.getTachoCount() > 0)?(1):(-1));
-                    System.out.println("C FAIL: " + changecountc + " DIR " + c);
                     changecountc++;
-                    Motor.C.setSpeed(speedc / (changecountc * ActionHelper.redfac));
+                    Motor.C.setSpeed(speedc /
+                            (changecountc * ActionHelper.redfac));
                     if (c == 1) {
                         Motor.C.forward();
                     } else {
@@ -88,10 +92,11 @@ public class ActionHelper {
         }
     }
 
-    //11.2cm
-    //3cm
-    //3.97580087233961
-    //70.3716754404113
+    //Distance between the wheels 11.2cm
+    //Radius of the wheels 2.89cm repeating of course
+    //3.97580087233961 I din't know what this number is
+    //70.3716754404113 The circumference of the
+    //                 turning radius of the robot in cm
     /**
      * <p>This method turns the robot around a point shown in
      * <code>balance</code>.
@@ -111,6 +116,44 @@ public class ActionHelper {
         System.out.print("" + speedb + " ");
         System.out.println("" + speedc);
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
+    }
+
+    /**
+     * <p>This method turns the robot around a point shown in
+     * <code>balance</code>.
+     * @param degrees positive rotates to the left, negative to the right
+     * @param speed the speed
+     * @param balance 0 rotates around the right wheel, 0.5 rotates around the
+     * center, and 1 rotates around the left wheel
+     * @param debug A debug string
+     */
+    public static void Rotate(int degrees, int speed,
+            double balance, String debug) {
+        System.out.println(debug);
+        ActionHelper.Rotate(degrees, speed, balance);
+    }
+
+    /**
+     * Turns the robot around a point offset by a number of centimeters from
+     * the middle of the robet.
+     * @param degrees positive number rotates counterclockwise, negative rotates clockwise
+     * @param speed the speed
+     * @param center the center of the turn in centimeters offset from the center of the robet
+     */
+    public static void Arc(int degrees, int speed, int center) {
+        ActionHelper.Rotate(degrees, speed, (5.6 + (center))/11.2);
+    }
+
+    /**
+     * Turns the robot around a point offset by a number of centimeters from
+     * the middle of the robet.
+     * @param degrees positive number rotates counterclockwise, negative rotates clockwise
+     * @param speed the speed
+     * @param center the center of the turn in centimeters offset from the center of the robet
+     * @param debug the debug string
+     */
+    public static void Arc(int degrees, int speed, int center, String debug) {
+        ActionHelper.Rotate(degrees, speed, (5.6 + (center))/11.2, debug);
     }
 
     /**
