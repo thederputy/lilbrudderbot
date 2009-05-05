@@ -7,7 +7,7 @@ package helper;
 
 import lejos.nxt.*;
 /**
- *
+ * <p>This class is what defines how the robot moves and turns.</p>
  * @author Austin
  */
 public class ActionHelper {
@@ -15,7 +15,7 @@ public class ActionHelper {
     public static int accfactor = 2;
     public static int maxretries = 3;
     public static int redfac = 6;
-    public static void MotorST(int distc, int speedc, int distb, int speedb) {
+    private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
         Motor.B.stop();
