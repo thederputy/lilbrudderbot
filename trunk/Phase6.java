@@ -30,7 +30,7 @@ public class Phase6 {
         //go forward to scoop the pizza molecules
         ActionHelper.MotorGo(50, SPEED, 50, SPEED, "SCOOPING PIZZA");
         //turn to face the base
-        ActionHelper.Rotate(60, SPEED, 0.5, "FACING BASE");
+        ActionHelper.Rotate(75, SPEED, 0.5, "FACING BASE");
         //go backwards to hit the elevator
         ActionHelper.MotorGo(-35, SPEED, -35, SPEED, "HITTING ELEVATOR");
         //go to the nano base
