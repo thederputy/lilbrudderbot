@@ -26,15 +26,15 @@ public class ActionHelper {
         while (Motor.B.getActualSpeed() != 0 && Motor.C.getActualSpeed() != 0) {
         }
 
-        if (numActions == 0) {
+        if (ActionHelper.numActions == 0) {
             Motor.B.smoothAcceleration(true);
             Motor.C.smoothAcceleration(true);
-            ActionHelper.Stop();
+            //ActionHelper.Stop();
         } else {
             Motor.B.smoothAcceleration(false);
             Motor.C.smoothAcceleration(false);
         }
-        numActions++;
+        ActionHelper.numActions++;
 
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
