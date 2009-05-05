@@ -22,20 +22,23 @@ public class Phase1 {
          * <p>The speed of the motor when turning.</p>
          */
         int turn = 200;
-        // go out from base
-        ActionHelper.MotorGo(120, speed, 20, speed, "GO OUT FROM BASE");
-        //turn left
-        ActionHelper.Rotate(90, turn, 0.5);
-        //go towards the ocean
-        ActionHelper.MotorGo(41, speed, 41, speed, "GO TOWARDS OCEAN");
-        //turn right
-        ActionHelper.Rotate(-90, turn, 0.5);
-        //drop off the wave turbine
-        ActionHelper.MotorGo(15, speed, 15, speed, "DROP OFF TURBINE");
-        //back up
-        ActionHelper.MotorGo(-15, speed, -15, speed, "BACKING UP");
-        //turn right
-        ActionHelper.Rotate(-90, turn, 0.5);
-
+        // Move forward into parking lot
+        ActionHelper.MotorGo(45, speed, 45, speed, "LEAVING THE BASE");
+        // Arc turn right and move to beach
+        ActionHelper.Arc(-90, speed, -60, "GOING TO CATCH SOME SUN");
+        // Turn to line up with truck
+        ActionHelper.Rotate(80, speed, 0.5);
+        // Reverse to push truck
+        ActionHelper.MotorGo(-45, speed, -45, speed, "PUSHING TRUCK");
+        // Turn right to line up with satellite
+        ActionHelper.Rotate(-80, speed, 0.5);
+        // Go forward and hit satellite button
+        ActionHelper.MotorGo(30, speed, 30, speed, "HITTING SATELLITE");
+        // Reverse back to truck
+        ActionHelper.MotorGo(-30, speed, -30, speed, "MOVING BACK TO TRUCK");
+        // Turn to line up with truck
+        ActionHelper.Rotate(-95, speed, 0.5);
+        // Push truck to base
+        ActionHelper.Arc(-70, speed, -30, "RETURN TO BASE WITH TRUCK");
     }
 }
