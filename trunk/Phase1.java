@@ -19,17 +19,18 @@ public class Phase1 {
          */
         int speed = 500;
         /**
-         * <p>The speed of the motor when turning.</p>
+         * <p>The speed of the motor when arcing.</p>
          */
-        int turn = 200;
+        int speedArc = 800;
         // Move forward into parking lot
         ActionHelper.MotorGo(45, speed, 45, speed, "LEAVING THE BASE");
         // Arc turn right and move to beach
-        ActionHelper.Arc(-90, speed, -60, "GOING TO CATCH SOME SUN");
+        ActionHelper.Arc(-90, speedArc, -60, "GOING TO CATCH SOME SUN");
+        ActionHelper.MotorGo(15, speed, 15, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
         ActionHelper.Rotate(80, speed, 0.5);
         // Reverse to push truck
-        ActionHelper.MotorGo(-45, speed, -45, speed, "PUSHING TRUCK");
+        ActionHelper.MotorGo(-90, speed, -90, speed, "PUSHING TRUCK");
         // Turn right to line up with satellite
         ActionHelper.Rotate(-80, speed, 0.5);
         // Go forward and hit satellite button
@@ -39,6 +40,6 @@ public class Phase1 {
         // Turn to line up with truck
         ActionHelper.Rotate(-95, speed, 0.5);
         // Push truck to base
-        ActionHelper.Arc(-70, speed, -30, "RETURN TO BASE WITH TRUCK");
+        ActionHelper.Arc(-70, speedArc, -30, "RETURN TO BASE WITH TRUCK");
     }
 }
