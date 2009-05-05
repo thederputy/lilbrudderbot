@@ -202,6 +202,6 @@ public class ActionHelper {
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
     }
     public static void Stop() {
-        ActionHelper.MotorST(0, 600, 0, 600);
+        ActionHelper.MotorST(0, 300, 0, 300);
     }
 }
