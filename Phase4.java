@@ -14,13 +14,13 @@ public class Phase4 {
         //pick up dam and leave base
         ActionHelper.MotorGo(-20, speed, -20, speed, "GRABBIN' THE DAM!");
         //turn toward dam
-        ActionHelper.Rotate(-70, speed, 2);
+        ActionHelper.Rotate(-75, speed, 2);
         //go towards river
-        ActionHelper.MotorGo(-40, speed, -40, speed, "PLACING THE DAM");
+        ActionHelper.MotorGo(-43, speed, -43, speed, "PLACING THE DAM");
         //retun to base
         ActionHelper.MotorGo(40, retspeed, 40, speed, "RETURNING TO BASE");
 
-        ActionHelper.Rotate(70, retspeed, 2);
+        ActionHelper.Rotate(75, retspeed, 2);
 
         ActionHelper.MotorGo(20, retspeed, 20, speed, "RETURNING TO BASE");
         
