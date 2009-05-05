@@ -110,7 +110,7 @@ public class ActionHelper {
         int distb = (int) (dist * balance);
         int distc = (int) (-dist * (1 - balance));
         int div = Math.max(Math.abs(distb), Math.abs(distc));
-        int speedh = ((balance >= 0 && balance <= 1)?(speed/2):((speed/4)*3));
+        int speedh = ((balance >= 0 && balance <= 1)?(speed/2):((speed/16)*12));
         int speedb = Math.abs(speedh * distb / div);
         int speedc = Math.abs(speedh * distc / div);
         System.out.print("" + speedb + " ");
