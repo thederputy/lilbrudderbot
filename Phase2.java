@@ -16,7 +16,7 @@ public class Phase2 {
         ActionHelper.MotorGo(46, speed, 46, speed, "GO TOWARDS CORN");
         ActionHelper.Rotate(-70, speed, 0);
         ActionHelper.MotorGo(15, speed, 15, speed, "GRAB CORN");
-        ActionHelper.Rotate(90 + 70, speed, 0.2);
+        ActionHelper.Rotate(90 + 70, speed, 0.5);
 //        //turn left
 //        ActionHelper.Rotate(90, speed, 0.5);
 //        ActionHelper.MotorGo(-15, speed, -15, speed, "REVERSE");

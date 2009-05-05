@@ -8,5 +8,7 @@ import helper.ActionHelper;
  * @author Cake Zombi
  */
 public class Phase5 {
-
+    public static void main(String[] args) {
+        
+    }
 }
