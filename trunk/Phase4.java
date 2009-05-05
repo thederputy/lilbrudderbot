@@ -12,17 +12,17 @@ public class Phase4 {
         int speed = 500;
         int retspeed = 600;
         //pick up dam and leave base
-        ActionHelper.MotorGo(-20, speed, -20, speed, "GRABBIN' THE DAM!");
+        ActionHelper.MotorGo(-23, speed, -23, speed, "GRABBIN' THE DAM!");
         //turn toward dam
-        ActionHelper.Rotate(-65, speed, 2.5);
+        ActionHelper.Rotate(-68, speed, 2.5);
         //go towards river
-        ActionHelper.MotorGo(-48, speed, -48, speed, "PLACING THE DAM");
+        ActionHelper.MotorGo(-45, speed, -45, speed, "PLACING THE DAM");
         //retun to base
-        ActionHelper.MotorGo(48, retspeed, 48, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(45, retspeed, 45, speed, "RETURNING TO BASE");
 
-        ActionHelper.Rotate(65, retspeed, 2.5);
+        ActionHelper.Rotate(68, retspeed, 2.5);
 
-        ActionHelper.MotorGo(20, retspeed, 20, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(23, retspeed, 23, speed, "RETURNING TO BASE");
         
     }
 
