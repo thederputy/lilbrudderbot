@@ -12,11 +12,11 @@ public class Phase5 {
     public static void main(String[] args) {
         int speed = 500;
         int retspeed = 600;
-        //pick up dam and leave base
+        //pick up power lines and leave base
         ActionHelper.MotorGo(-40, speed, -40, speed, "GRABBIN' THE POWER LINES");
-        //turn toward dam
+        //push power lines
         ActionHelper.Rotate(-40, speed, 2.5);
-        //go towards river
+        //go towards power plant
         ActionHelper.MotorGo(-27, speed, -27, speed, "PLACING THE POWER LINES");
         //go home
         ActionHelper.MotorGo(27, retspeed, 27, speed, "GOIN' HOME");
