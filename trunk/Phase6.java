@@ -8,6 +8,13 @@ import lejos.nxt.*;
  * @author Jacob
  */
 public class Phase6 {
+    /**
+     * <p>The speed of the motor when going forwards and backwards.</p>
+     */
+    int speed = 500;
+    int turn = 200;
+    //original code
+    /*
     private static int MOTOR_SPEED = 500;
     public static void main(String[] args) {
         LCD.clearDisplay();
@@ -108,5 +115,6 @@ public class Phase6 {
         Motor.B.stop();
         Motor.C.stop();
     }
+    */
 }
 
