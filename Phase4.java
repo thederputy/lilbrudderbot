@@ -16,9 +16,9 @@ public class Phase4 {
         //turn toward dam
         ActionHelper.Rotate(-68, speed, 2.5);
         //go towards river
-        ActionHelper.MotorGo(-45, speed, -45, speed, "PLACING THE DAM");
+        ActionHelper.MotorGo(-42, speed, -42, speed, "PLACING THE DAM");
         //retun to base
-        ActionHelper.MotorGo(45, retspeed, 45, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(42, retspeed, 42, speed, "RETURNING TO BASE");
 
         ActionHelper.Rotate(68, retspeed, 2.5);
 
