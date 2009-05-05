@@ -7,7 +7,7 @@ import lejos.nxt.*;
  *
  * @author Jacob
  */
-public class PowerNano {
+public class Phase6 {
     private static int MOTOR_SPEED = 500;
     public static void main(String[] args) {
         LCD.clearDisplay();
