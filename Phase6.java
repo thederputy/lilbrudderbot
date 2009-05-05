@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-import lejos.nxt.*;
+import helper.ActionHelper;
 /**
  *
  * @author Jacob
@@ -11,15 +11,41 @@ public class Phase6 {
     /**
      * <p>The speed of the motor when going forwards and backwards.</p>
      */
-    int speed = 500;
-    int turn = 200;
+    private static final int SPEED = 500;
+    /**
+     * <p>The speed of the motor when turning.</p>
+     */
+    private static final int TURN = 200;
+    /**
+     * <p>This is the class for phase 6.
+     * It does these things:
+     *      - crosses the bridge
+     *      - scoops the pizza molecules
+     *      - hits the second elevator lever
+     *      - goes back to the nano base
+     * @param args
+     */
+    public static void main(String[] args) {
+        //go out from the base and cross the bridge
+        ActionHelper.MotorGo(148, SPEED, 148, SPEED, "CROSSING BRIDGE");
+        //turn right to face the pizza molecules
+        ActionHelper.Rotate(-90, TURN, 0.5, "");
+        //go forward to scoop the pizza molecules
+        ActionHelper.MotorGo(40, SPEED, 40, SPEED, "SCOOPING PIZZA");
+        //turn to face the base
+        ActionHelper.Rotate(90, TURN, 0.5, "FACING BASE");
+        //go backwards to hit the elevator
+        ActionHelper.MotorGo(37, SPEED, 37, SPEED, "HITTING ELEVATOR");
+        //go to the nano base
+        ActionHelper.MotorGo(80, SPEED, 80, SPEED, "GO TO NANO BASE");
+    }
     //original code
     /*
     private static int MOTOR_SPEED = 500;
     public static void main(String[] args) {
         LCD.clearDisplay();
         System.out.println("I WILL GO FROM \nTHE POWER BASE \nTO THE NANO BASE"
-        		+ "\n WHEN YOU PRESS \nA BUTTON!");
+                + "\n WHEN YOU PRESS \nA BUTTON!");
         Button.waitForPress();
         LCD.clearDisplay();
         //cross the bridge
