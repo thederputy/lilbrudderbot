@@ -31,7 +31,7 @@ public class Phase6 {
         //turn to face the base
         ActionHelper.Rotate(60, SPEED, 0.5, "FACING BASE");
         //go backwards to hit the elevator
-        ActionHelper.MotorGo(-40, SPEED, -40, SPEED, "HITTING ELEVATOR");
+        ActionHelper.MotorGo(-40, SPEED, -41, SPEED, "HITTING ELEVATOR");
         //go to the nano base
         ActionHelper.MotorGo(80, SPEED, 80, SPEED, "GO TO NANO BASE");
     }
