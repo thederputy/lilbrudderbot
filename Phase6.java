@@ -13,10 +13,6 @@ public class Phase6 {
      */
     private static final int SPEED = 500;
     /**
-     * <p>The speed of the motor when turning.</p>
-     */
-    private static final int TURN = 200;
-    /**
      * <p>This is the class for phase 6.
      * It does these things:
      *      - crosses the bridge
@@ -29,11 +25,11 @@ public class Phase6 {
         //go out from the base and cross the bridge
         ActionHelper.MotorGo(148, SPEED, 148, SPEED, "CROSSING BRIDGE");
         //turn right to face the pizza molecules
-        ActionHelper.Rotate(-90, TURN, 0.5, "");
+        ActionHelper.Rotate(-90, SPEED, 0.5, "");
         //go forward to scoop the pizza molecules
         ActionHelper.MotorGo(40, SPEED, 40, SPEED, "SCOOPING PIZZA");
         //turn to face the base
-        ActionHelper.Rotate(90, TURN, 0.5, "FACING BASE");
+        ActionHelper.Rotate(90, SPEED, 0.5, "FACING BASE");
         //go backwards to hit the elevator
         ActionHelper.MotorGo(37, SPEED, 37, SPEED, "HITTING ELEVATOR");
         //go to the nano base
