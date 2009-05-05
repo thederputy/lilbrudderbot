@@ -23,7 +23,7 @@ public class Phase6 {
      */
     public static void main(String[] args) {
         //go out from the base and cross the bridge
-        ActionHelper.MotorGo(148, SPEED, 148, SPEED, "CROSSING BRIDGE");
+        ActionHelper.MotorGo(160, SPEED, 160, SPEED, "CROSSING BRIDGE");
         //turn right to face the pizza molecules
         ActionHelper.Rotate(-90, SPEED, 0.5, "");
         //go forward to scoop the pizza molecules
@@ -31,7 +31,7 @@ public class Phase6 {
         //turn to face the base
         ActionHelper.Rotate(90, SPEED, 0.5, "FACING BASE");
         //go backwards to hit the elevator
-        ActionHelper.MotorGo(37, SPEED, 37, SPEED, "HITTING ELEVATOR");
+        ActionHelper.MotorGo(-37, SPEED, -37, SPEED, "HITTING ELEVATOR");
         //go to the nano base
         ActionHelper.MotorGo(80, SPEED, 80, SPEED, "GO TO NANO BASE");
     }
