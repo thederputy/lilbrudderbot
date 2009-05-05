@@ -23,8 +23,13 @@ public class Phase1 {
         //go towards the ocean
         ActionHelper.MotorGo(41, speed, 41, speed, "GO TOWARDS OCEAN");
         //turn right
-         ActionHelper.Rotate(90, turn, 0.5);
-         //drop off the wave turbine
-         ActionHelper.MotorGo(15, speed, 15, speed, "DROP OFF TURBINE");
+        ActionHelper.Rotate(90, turn, 0.5);
+        //drop off the wave turbine
+        ActionHelper.MotorGo(15, speed, 15, speed, "DROP OFF TURBINE");
+        //back up
+        ActionHelper.MotorGo(-15, speed, -15, speed, "BACKING UP");
+        //turn right
+        ActionHelper.Rotate(90, turn, 0.5);
+
     }
 }
