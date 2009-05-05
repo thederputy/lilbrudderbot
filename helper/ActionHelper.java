@@ -29,7 +29,7 @@ public class ActionHelper {
         if (numActions == 0) {
             Motor.B.smoothAcceleration(true);
             Motor.C.smoothAcceleration(true);
-            
+            ActionHelper.Stop();
         } else {
             Motor.B.smoothAcceleration(false);
             Motor.C.smoothAcceleration(false);
