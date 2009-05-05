@@ -15,11 +15,16 @@ import helper.ActionHelper;
 public class Phase1 {
     public static void main(String[] args) {
         int speed = 500;
+        int turn = 200;
         // go out from base
         ActionHelper.MotorGo(16, speed, 16, speed, "GO OUT FROM BASE");
         //turn left
-        ActionHelper.Rotate(-90, speed, 0.5);
+        ActionHelper.Rotate(-90, turn, 0.5);
         //go towards the ocean
         ActionHelper.MotorGo(41, speed, 41, speed, "GO TOWARDS OCEAN");
+        //turn right
+         ActionHelper.Rotate(90, turn, 0.5);
+         //drop off the wave turbine
+         ActionHelper.MotorGo(15, speed, 15, speed, "DROP OFF TURBINE");
     }
 }
