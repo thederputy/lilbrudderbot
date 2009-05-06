@@ -28,7 +28,7 @@ public class Phase6 {
      * @param args
      */
     public static void main(String[] args) {
-        ActionHelper.Stop();
+        ActionHelper.Start();
         //go out from the base and cross the bridge
         ActionHelper.MotorGo(165, SPEED, 165, SPEED, "CROSSING BRIDGE");
         //turn right to face the pizza molecules
