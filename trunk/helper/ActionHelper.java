@@ -6,6 +6,7 @@ package helper;
  */
 
 import lejos.nxt.*;
+import lejos.util.*;
 /**
  * <p>This class is what defines how the robot moves and turns.</p>
  * @author Austin
@@ -16,6 +17,7 @@ public class ActionHelper {
     public static int maxretries = 3;
     public static int redfac = 6;
     private static int numActions = 0;
+    public static int SecStart = 3;
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -204,4 +206,38 @@ public class ActionHelper {
     public static void Stop() {
         ActionHelper.MotorST(0, 300, 0, 300);
     }
+
+    public static void Start() {
+        StartTimer st = new StartTimer();
+        Timer time = new Timer(1000, st);
+        st.settimer(time);
+        while (st.sec > 0) {
+            
+        }
+        ActionHelper.Stop();
+    }
+}
+
+class StartTimer implements TimerListener {
+
+    private Timer mtime;
+    public int sec;
+    public void settimer(Timer time) {
+        mtime = time;
+    }
+
+    public StartTimer() {
+        sec = ActionHelper.SecStart;
+    }
+
+    public void timedOut() {
+        if (sec < 1) {
+            mtime.stop();
+            System.out.println("PARTY TIME");
+        } else {
+            System.out.println("" + sec + "...");
+        }
+        sec--;
+    }
+
 }
