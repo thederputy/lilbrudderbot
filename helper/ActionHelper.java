@@ -208,36 +208,11 @@ public class ActionHelper {
     }
 
     public static void Start() {
-        StartTimer st = new StartTimer();
-        Timer time = new Timer(1000, st);
-        st.settimer(time);
-        while (st.sec > 0) {
-            
+        for (int nsec = 0; nsec < ActionHelper.SecStart; nsec++) {
+            System.out.println("" + nsec + "...");
+            try{Thread.sleep(1000);}catch(Exception e) {}
         }
+        System.out.println("BUNGLE IN THE\nJUNGLE");
         ActionHelper.Stop();
     }
-}
-
-class StartTimer implements TimerListener {
-
-    private Timer mtime;
-    public int sec;
-    public void settimer(Timer time) {
-        mtime = time;
-    }
-
-    public StartTimer() {
-        sec = ActionHelper.SecStart;
-    }
-
-    public void timedOut() {
-        if (sec < 1) {
-            mtime.stop();
-            System.out.println("PARTY TIME");
-        } else {
-            System.out.println("" + sec + "...");
-        }
-        sec--;
-    }
-
 }
