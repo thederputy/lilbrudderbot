@@ -10,7 +10,7 @@ import helper.ActionHelper;
 public class Phase4 {
     public static void main(String[] args) {
         int speed = 500;
-        int retspeed = 700;
+        int retspeed = 800;
         //pick up dam and leave base
         ActionHelper.MotorGo(-20, speed, -20, speed, "GRABBIN' THE DAM!");
         //turn toward dam
@@ -18,11 +18,11 @@ public class Phase4 {
         //go towards river
         ActionHelper.MotorGo(-43, speed, -43, speed, "PLACING THE DAM");
         //retun to base
-        ActionHelper.MotorGo(40, retspeed, 40, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(40, retspeed, 40, retspeed, "RETURNING TO BASE");
 
         ActionHelper.Rotate(75, retspeed, 2);
 
-        ActionHelper.MotorGo(20, retspeed, 20, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(20, retspeed, 20, retspeed, "RETURNING TO BASE");
         
     }
 
