@@ -26,9 +26,9 @@ public class Phase1 {
         ActionHelper.MotorGo(45, speed, 45, speed, "LEAVING THE BASE");
         // Arc turn right and move to beach
         ActionHelper.Arc(-90, speedArc, -60, "GOING TO CATCH SOME SUN");
-        ActionHelper.MotorGo(5, speed, 5, speed, "DEPLOYING WAVE TURBINE");
+        ActionHelper.MotorGo(15, speed, 15, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(75, speed, 0.5);
+        ActionHelper.Rotate(74, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
         // Moving back to line with satellite
