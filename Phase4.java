@@ -10,7 +10,7 @@ import helper.ActionHelper;
 public class Phase4 {
     public static void main(String[] args) {
         int speed = 500;
-        int retspeed = 800;
+        int retspeed = 650;
         //pick up dam and leave base
         ActionHelper.MotorGo(-20, speed, -20, speed, "GRABBIN' THE DAM!");
         //turn toward dam

@@ -11,7 +11,7 @@ public class Phase5 {
     
     public static void main(String[] args) {
         int speed = 500;
-        int retspeed = 800;
+        int retspeed = 650;
         //pick up power lines and leave base
         ActionHelper.MotorGo(-40, speed, -40, speed, "GRABBIN' THE POWER LINES");
         //push power lines
