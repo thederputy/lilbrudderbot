@@ -17,7 +17,7 @@ public class ActionHelper {
     public static int maxretries = 3;
     public static int redfac = 6;
     private static int numActions = 0;
-    public static int SecStart = 3;
+    public static int SecStart = 5;
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -209,10 +209,10 @@ public class ActionHelper {
 
     public static void Start() {
         for (int nsec = 0; nsec < ActionHelper.SecStart; nsec++) {
-            System.out.println("" + nsec + "...");
-            try{Thread.sleep(1000);}catch(Exception e) {}
+            System.out.println("" + (ActionHelper.SecStart - nsec) + "...");
+            try{Thread.sleep(200);}catch(Exception e) {}
         }
-        System.out.println("BUNGLE IN THE\nJUNGLE");
+        System.out.println("CHABBENGE");
         ActionHelper.Stop();
     }
 }
