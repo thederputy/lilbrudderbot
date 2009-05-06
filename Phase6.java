@@ -4,11 +4,12 @@
  */
 import helper.ActionHelper;
 /**
- * <p>This class does the following things:
- *      -
- *      -
- *      -
- *      -
+ * <p>This class does the following things.
+ *      - crosses the bridge
+ *      - turns right to scoop the pizza molecules
+ *      - faces the base
+ *      - backs up to hit the second elevator lever
+ *      - takes the pizza molecules to the Nano base
  * </p>
  * @author Jacob
  */
@@ -34,12 +35,16 @@ public class Phase6 {
         ActionHelper.Rotate(-98, SPEED, 0.5, "");
         //go forward to scoop the pizza molecules
         ActionHelper.MotorGo(50, SPEED, 50, SPEED, "SCOOPING PIZZA");
-        //turn to face the base
+        //turn left to face the base
         ActionHelper.Rotate(75, SPEED, 0, "FACING BASE");
         //go backwards to hit the elevator
         ActionHelper.MotorGo(-30, SPEED, -30, SPEED, "HITTING ELEVATOR");
-        //go to the nano base
-        ActionHelper.MotorGo(80, SPEED, 80, SPEED, "GO TO NANO BASE");
+        //go forward a bit before turning to better face the Nano base
+        ActionHelper.MotorGo(5, SPEED, 5, SPEED, "GO TO NANO BASE");
+        //turn a bit to face the Nano Base
+        ActionHelper.Rotate(-10, SPEED, 0, "FACING BASE");
+        //go to the Nano base
+        ActionHelper.MotorGo(85, SPEED, 85, SPEED, "GO TO NANO BASE");
     }
     //original code
     /*
