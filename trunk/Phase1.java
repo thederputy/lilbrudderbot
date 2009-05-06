@@ -22,6 +22,7 @@ public class Phase1 {
          * <p>The speed of the motor when arcing.</p>
          */
         int speedArc = 800;
+        ActionHelper.Start();
         // Move forward into parking lot
         ActionHelper.MotorGo(45, speed, 45, speed, "LEAVING THE BASE");
         // Arc turn right and move to beach

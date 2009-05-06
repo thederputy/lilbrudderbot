@@ -10,6 +10,7 @@ import helper.ActionHelper;
 public class Phase2 {
     public static void main(String[] args) {
         int speed = 500;
+        ActionHelper.Start();
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
