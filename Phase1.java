@@ -10,7 +10,7 @@ import helper.ActionHelper;
  *      - pushes the truck back to the base
  *      - pushes one of the sattelite levers
  *      - goes back to base.</p>
- * @author Jacob
+ * @author Ira
  */
 public class Phase1 {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class Phase1 {
         ActionHelper.Arc(-90, speedArc, -60, "GOING TO CATCH SOME SUN");
         ActionHelper.MotorGo(7, speed, 7, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(75, speed, 0.5);
+        ActionHelper.Rotate(70, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-100, speed, -100, speed, "PUSHING TRUCK");
         // Moving back to line with satellite
@@ -42,8 +42,8 @@ public class Phase1 {
         // Turn to line up with truck
         ActionHelper.Rotate(60, speed, 0.5);
         // Push Truck
-        ActionHelper.MotorGo(20, speed, 20, speed,"PUSHING THE TRUCK");
+        ActionHelper.MotorGo(35, speed, 35, speed,"PUSHING THE TRUCK");
         // RETURN TO BASE
-        ActionHelper.Arc(-70, speedArc, -30, "RETURN TO BASE");
+        ActionHelper.Arc(-80, speedArc, -30, "RETURN TO BASE");
     }
 }
