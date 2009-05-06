@@ -1,2 +1,2 @@
 @echo off
-nxj Phase4
+nxj -u Phase4

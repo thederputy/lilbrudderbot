@@ -4,12 +4,12 @@
  */
 import helper.ActionHelper;
 /**
- * <p>This class does the following things.
+ * <p>This class does the following things:
  *      -
  *      -
  *      -
  *      -
- *  .</p>
+ * </p>
  * @author Jacob
  */
 public class Phase6 {
