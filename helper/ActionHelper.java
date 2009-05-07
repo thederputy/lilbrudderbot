@@ -109,8 +109,16 @@ public class ActionHelper {
         int mc = ((distc > 0)?1:-1);
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
-        Motor.C.forward();
-        Motor.B.forward();
+        if (mb == 1) {
+            Motor.B.forward();
+        } else {
+            Motor.B.backward();
+        }
+        if (mc == 1) {
+            Motor.C.forward();
+        } else {
+            Motor.C.backward();
+        }
         while (Motor.B.isMoving() || Motor.C.isMoving()) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
@@ -144,7 +152,7 @@ public class ActionHelper {
         int distb = (int) (dist * balance);
         int distc = (int) (-dist * (1 - balance));
         int div = Math.max(Math.abs(distb), Math.abs(distc));
-        int speedh = ((balance >= 0 && balance <= 1)?(speed/2):((speed/16)*12));
+        int speedh = ((balance >= 0 && balance <= 1)?((speed/4)*3):((speed/16)*14));
         int speedb = Math.abs(speedh * distb / div);
         int speedc = Math.abs(speedh * distc / div);
         System.out.print("" + speedb + " ");
