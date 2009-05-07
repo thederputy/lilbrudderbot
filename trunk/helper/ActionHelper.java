@@ -114,8 +114,8 @@ public class ActionHelper {
     private static void MotorTN(int distc, int speedc, int distb, int speedb) {
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
-        Motor.C.rotateTo((int)(distc * Translation), true);
-        Motor.B.rotateTo((int)(distb * Translation), true);
+        Motor.C.rotateTo((int)(distc * Translation), false);
+        Motor.B.rotateTo((int)(distb * Translation), false);
         while (Motor.B.isRotating() || Motor.C.isRotating()) {
             try{Thread.sleep(100);}catch(Exception e) {}
         }
