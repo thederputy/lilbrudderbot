@@ -27,20 +27,11 @@ public class ActionHelper {
         int udistc = (int) (distc * ActionHelper.Translation);
         Motor.B.stop();
         Motor.C.stop();
-        Motor.B.regulateSpeed(true);
-        Motor.C.regulateSpeed(true);
+        
         while (Motor.B.getActualSpeed() != 0 && Motor.C.getActualSpeed() != 0) {
         }
 
-        if (ActionHelper.numActions == 0) {
-            Motor.B.smoothAcceleration(true);
-            Motor.C.smoothAcceleration(true);
-            //ActionHelper.Stop();
-        } else {
-            Motor.B.smoothAcceleration(false);
-            Motor.C.smoothAcceleration(false);
-        }
-        ActionHelper.numActions++;
+       
 
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
@@ -116,13 +107,23 @@ public class ActionHelper {
         Motor.C.resetTachoCount();
         int mb = ((distb > 0)?1:-1);
         int mc = ((distc > 0)?1:-1);
-        Motor.B.setSpeed(speedb * mb);
-        Motor.C.setSpeed(speedc * mc);
-        Motor.C.rotateTo((int)(distc * Translation * mc), false);
-        Motor.B.rotateTo((int)(distb * Translation * mb), false);
-        while (Motor.B.isRotating() || Motor.C.isRotating()) {
-            try{Thread.sleep(100);}catch(Exception e) {}
+        Motor.B.setSpeed(speedb);
+        Motor.C.setSpeed(speedc);
+        Motor.C.forward();
+        Motor.B.forward();
+        while (Motor.B.isMoving() || Motor.C.isMoving()) {
+            int bc = Motor.B.getTachoCount();
+            int cc = Motor.C.getTachoCount();
+            if ((bc * mb) >= (distb * mb)) {
+                Motor.B.stop();
+            }
+            if ((cc * mc) >= (distc * mc)) {
+                Motor.C.stop();
+            }
+            //try{Thread.sleep(10);}catch(Exception e) {}
         }
+        Motor.B.stop();
+        Motor.C.stop();
     }
 
     //Distance between the wheels 11.2cm
@@ -207,8 +208,8 @@ public class ActionHelper {
      */
     public static void MotorGo(int distc, int speedc, int distb, int speedb) {
         //ActionHelper.Stop(); Stop seems to be making it jitter unpredictably
-        ActionHelper.MotorST(distc, speedc, distb, speedb);
-        //ActionHelper.MotorTN(distc, speedc, distb, speedb);
+        //ActionHelper.MotorST(distc, speedc, distb, speedb);
+        ActionHelper.MotorTN(distc, speedc, distb, speedb);
     }
     /**
      * <p>This version of <code>MotorGo</code> has a string output.</p>
@@ -223,7 +224,7 @@ public class ActionHelper {
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
     }
     public static void Stop() {
-        ActionHelper.MotorST(0, 300, 0, 300);
+        ActionHelper.MotorGo(0, 300, 0, 300);
     }
 
     public static void Pause(int millis) {
@@ -239,6 +240,10 @@ public class ActionHelper {
             try{Thread.sleep(200);}catch(Exception e) {}
         }
         System.out.println("CHABBENGE");
+        Motor.B.regulateSpeed(true);
+        Motor.C.regulateSpeed(true);
+        Motor.B.smoothAcceleration(true);
+        Motor.C.smoothAcceleration(true);
         ActionHelper.Stop();
     }
 }
