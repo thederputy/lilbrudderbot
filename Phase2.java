@@ -18,13 +18,13 @@ public class Phase2 {
         ActionHelper.Rotate(-70, speed, 0);
         ActionHelper.MotorGo(15, speed, 15, speed, "GRAB CORN");
         ActionHelper.Rotate(90 + 70, speed, 0.5);
-//        //turn left
-//        ActionHelper.Rotate(90, speed, 0.5);
-//        ActionHelper.MotorGo(-15, speed, -15, speed, "REVERSE");
-//        //flick lever
-//        ActionHelper.Rotate(-25, speed, 0.5);
-//        //come back from flipping
-//        ActionHelper.Rotate(25, speed, 0.5);
+        //turn left
+        ActionHelper.Rotate(90, speed, 0.5);
+        ActionHelper.MotorGo(-15, speed, -15, speed, "REVERSE");
+        //flick lever
+        ActionHelper.Rotate(-25, speed, 0.5);
+        //come back from flipping
+        ActionHelper.Rotate(25, speed, 0.5);
 //        //scoop corn
 //        ActionHelper.MotorGo(25, speed, 25, speed, "SCOOPING CORN");
 //        ActionHelper.Rotate(90, speed, 1);
