@@ -122,10 +122,10 @@ public class ActionHelper {
         while (Motor.B.isMoving() || Motor.C.isMoving()) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
-            if ((bc * mb) >= (distb * mb)) {
+            if ((bc * mb) >= (distb * Translation * mb)) {
                 Motor.B.stop();
             }
-            if ((cc * mc) >= (distc * mc)) {
+            if ((cc * mc) >= (distc * Translation * mc)) {
                 Motor.C.stop();
             }
             //try{Thread.sleep(10);}catch(Exception e) {}
