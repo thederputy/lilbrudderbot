@@ -5,6 +5,7 @@ package helper;
  * and open the template in the editor.
  */
 
+import lejos.navigation.TachoNavigator;
 import lejos.nxt.*;
 import lejos.util.*;
 /**
@@ -18,6 +19,9 @@ public class ActionHelper {
     public static int redfac = 6;
     private static int numActions = 0;
     public static int SecStart = 5;
+
+    private TachoNavigator nav;
+
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -107,6 +111,16 @@ public class ActionHelper {
         }
     }
 
+    private static void MotorTN(int distc, int speedc, int distb, int speedb) {
+        Motor.B.setSpeed(speedb);
+        Motor.C.setSpeed(speedc);
+        Motor.C.rotateTo((int)(distc * Translation), true);
+        Motor.B.rotateTo((int)(distb * Translation), true);
+        while (Motor.B.isRotating() || Motor.C.isRotating()) {
+            try{Thread.sleep(100);}catch(Exception e) {}
+        }
+    }
+
     //Distance between the wheels 11.2cm
     //Radius of the wheels 2.89cm repeating of course
     //3.97580087233961 I din't know what this number is
@@ -189,7 +203,8 @@ public class ActionHelper {
      */
     public static void MotorGo(int distc, int speedc, int distb, int speedb) {
         //ActionHelper.Stop(); Stop seems to be making it jitter unpredictably
-        ActionHelper.MotorST(distc, speedc, distb, speedb);
+        //ActionHelper.MotorST(distc, speedc, distb, speedb);
+        ActionHelper.MotorTN(distc, speedc, distb, speedb);
     }
     /**
      * <p>This version of <code>MotorGo</code> has a string output.</p>
