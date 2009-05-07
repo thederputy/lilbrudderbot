@@ -226,6 +226,13 @@ public class ActionHelper {
         ActionHelper.MotorST(0, 300, 0, 300);
     }
 
+    public static void Pause(int millis) {
+        for (int nsec = 0; nsec < 10; nsec++) {
+            System.out.println("" + (ActionHelper.SecStart - nsec) + "...");
+            try{Thread.sleep(millis/10);}catch(Exception e) {}
+        }
+    }
+
     public static void Start() {
         for (int nsec = 0; nsec < ActionHelper.SecStart; nsec++) {
             System.out.println("" + (ActionHelper.SecStart - nsec) + "...");
