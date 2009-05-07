@@ -22,14 +22,15 @@ public class Phase1 {
          * <p>The speed of the motor when arcing.</p>
          */
         int speedArc = 800;
-        ActionHelper.Start();
+        ActionHelper.MotorGo(10, speed, 10, speed);
+        ActionHelper.Rotate(90, speed, 0.5);
         // Move forward into parking lot
         ActionHelper.MotorGo(45, speed, 45, speed, "LEAVING THE BASE");
         // Arc turn right and move to beach
         ActionHelper.Arc(-90, speedArc, -60, "GOING TO CATCH SOME SUN");
         ActionHelper.MotorGo(15, speed, 15, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(74, speed, 0.5);
+        ActionHelper.Rotate(70, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
         // Moving back to line with satellite
