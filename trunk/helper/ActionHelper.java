@@ -112,12 +112,14 @@ public class ActionHelper {
     }
 
     private static void MotorTN(int distc, int speedc, int distb, int speedb) {
-        Motor.B.setSpeed(speedb);
-        Motor.C.setSpeed(speedc);
         Motor.B.resetTachoCount();
         Motor.C.resetTachoCount();
-        Motor.C.rotateTo((int)(distc * Translation), false);
-        Motor.B.rotateTo((int)(distb * Translation), false);
+        int mb = ((distb > 0)?1:-1);
+        int mc = ((distc > 0)?1:-1);
+        Motor.B.setSpeed(speedb * mb);
+        Motor.C.setSpeed(speedc * mc);
+        Motor.C.rotateTo((int)(distc * Translation * mc), false);
+        Motor.B.rotateTo((int)(distb * Translation * mb), false);
         while (Motor.B.isRotating() || Motor.C.isRotating()) {
             try{Thread.sleep(100);}catch(Exception e) {}
         }
