@@ -128,6 +128,9 @@ public class ActionHelper {
             if ((cc * mc) > (distc * Translation * mc)) {
                 Motor.C.stop();
             }
+            if (Motor.B.getActualSpeed() < 10) {
+                System.out.print(" Stuck ");
+            }
             //try{Thread.sleep(10);}catch(Exception e) {}
         }
         Motor.B.stop();
