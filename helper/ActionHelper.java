@@ -119,6 +119,7 @@ public class ActionHelper {
         } else {
             Motor.C.backward();
         }
+        boolean stuck = false;
         while (Motor.B.isMoving() || Motor.C.isMoving()) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
@@ -128,8 +129,9 @@ public class ActionHelper {
             if ((cc * mc) > (distc * Translation * mc)) {
                 Motor.C.stop();
             }
-            if (Motor.B.getActualSpeed() < 10) {
-                System.out.print(" Stuck ");
+            stuck = (stuck || (Math.abs(Motor.B.getActualSpeed()) < 1 && Math.abs(Motor.C.getActualSpeed()) < 1));
+            if (stuck) {
+                System.out.println("!!Stuck!!");
             }
             //try{Thread.sleep(10);}catch(Exception e) {}
         }
