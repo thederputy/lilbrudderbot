@@ -114,6 +114,8 @@ public class ActionHelper {
     private static void MotorTN(int distc, int speedc, int distb, int speedb) {
         Motor.B.setSpeed(speedb);
         Motor.C.setSpeed(speedc);
+        Motor.B.resetTachoCount();
+        Motor.C.resetTachoCount();
         Motor.C.rotateTo((int)(distc * Translation), false);
         Motor.B.rotateTo((int)(distb * Translation), false);
         while (Motor.B.isRotating() || Motor.C.isRotating()) {
