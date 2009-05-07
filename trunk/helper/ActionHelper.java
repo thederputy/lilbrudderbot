@@ -207,8 +207,8 @@ public class ActionHelper {
      */
     public static void MotorGo(int distc, int speedc, int distb, int speedb) {
         //ActionHelper.Stop(); Stop seems to be making it jitter unpredictably
-        //ActionHelper.MotorST(distc, speedc, distb, speedb);
-        ActionHelper.MotorTN(distc, speedc, distb, speedb);
+        ActionHelper.MotorST(distc, speedc, distb, speedb);
+        //ActionHelper.MotorTN(distc, speedc, distb, speedb);
     }
     /**
      * <p>This version of <code>MotorGo</code> has a string output.</p>
