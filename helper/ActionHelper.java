@@ -13,7 +13,7 @@ import lejos.util.*;
  * @author Austin
  */
 public class ActionHelper {
-    public static double Translation = 20.45;
+    public static double Translation = 20.4627783975293;
     public static int accfactor = 2;
     public static int maxretries = 3;
     public static int redfac = 6;
@@ -122,10 +122,10 @@ public class ActionHelper {
         while (Motor.B.isMoving() || Motor.C.isMoving()) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
-            if ((bc * mb) >= (distb * Translation * mb)) {
+            if ((bc * mb) > (distb * Translation * mb)) {
                 Motor.B.stop();
             }
-            if ((cc * mc) >= (distc * Translation * mc)) {
+            if ((cc * mc) > (distc * Translation * mc)) {
                 Motor.C.stop();
             }
             //try{Thread.sleep(10);}catch(Exception e) {}
