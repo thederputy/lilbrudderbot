@@ -27,7 +27,7 @@ public class Phase2 {
         //flick lever
         ActionHelper.Rotate(-25, speed, 0.5);
         //come back from flipping
-        ActionHelper.Rotate(25, speed, 0.5);
+        //ActionHelper.Rotate(25, speed, 0.5);
 //        //scoop corn
 //        ActionHelper.MotorGo(25, speed, 25, speed, "SCOOPING CORN");
 //        ActionHelper.Rotate(90, speed, 1);
