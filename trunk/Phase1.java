@@ -23,21 +23,21 @@ public class Phase1 {
          */
         int speedArc = 800;
         // Move forward into parking lot
-        ActionHelper.MotorGo(87, speed, 87, speed, "LEAVING THE BASE");
+        ActionHelper.MotorGo(88, speed, 88, speed, "LEAVING THE BASE");
         // Turn right
         ActionHelper.Rotate(-50, speed, 0.5);
         // Move to beach
         ActionHelper.MotorGo(79, speed, 79, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(30, speed, 0.5);
+        ActionHelper.Rotate(32, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
         // Moving back to line with satellite
         ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
         // Turn right to line up with satellite
-        ActionHelper.Rotate(110, speed, 0.5);
+        ActionHelper.Rotate(108, speed, 0.5);
         // Go forward and hit satellite button
-        ActionHelper.MotorGo(-60, speed, -60, speed, "HITTING SATELLITE");
+        ActionHelper.MotorGo(-58, speed, -58, speed, "HITTING SATELLITE");
         // Reverse back to truck
         ActionHelper.MotorGo(40, speed, 40, speed, "MOVING BACK TO TRUCK");
         // Turn to line up with base
