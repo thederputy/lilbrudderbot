@@ -123,7 +123,7 @@ public class ActionHelper {
         while ((Motor.B.isMoving() || Motor.C.isMoving()) && !stuck) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
-            stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) < 1 && Math.abs(Motor.C.getActualSpeed()) < 1)));
+            stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) == 0 && Math.abs(Motor.C.getActualSpeed()) == 0)));
             stuck = stuck && (((distb * Translation * mb) + (distc * Translation * mc)) / 4 < ((bc * mb) + (cc * mc))/2);
             if (stuck) {
                 System.out.println("!!Stuck!!");
