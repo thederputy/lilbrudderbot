@@ -25,11 +25,10 @@ public class Phase2 {
         ActionHelper.MotorGo(-11, speed, -11, speed, "REVERSE");
         //flick lever
         ActionHelper.Rotate(-25, speed, 0.5);
-        //come back from flipping
-        //ActionHelper.Rotate(25, speed, 0.5);
-//        //scoop corn
-//        ActionHelper.MotorGo(25, speed, 25, speed, "SCOOPING CORN");
-//        ActionHelper.Rotate(90, speed, 1);
+        //head toward Uranium
+        ActionHelper.MotorGo(62, speed, 62, speed, "SCOOPING CORN");
+        //scoop Uranium and point toward base
+        ActionHelper.Rotate(120, speed, .5);
 //
 //        ActionHelper.MotorGo(25, speed, 25, speed, "GOING BACK TO BASE");
 //        ActionHelper.Rotate(90, speed, 3);
