@@ -26,9 +26,9 @@ public class Phase2 {
         //flick lever
         ActionHelper.Rotate(-25, speed, 0.5);
         //head toward Uranium
-        ActionHelper.MotorGo(62, speed, 62, speed, "SCOOPING CORN");
+        ActionHelper.MotorGo(64, speed, 64, speed, "SCOOPING CORN");
         //scoop Uranium and point toward base
-        ActionHelper.Rotate(120, speed, .5);
+        ActionHelper.Rotate(120, 200, .5);
 //
 //        ActionHelper.MotorGo(25, speed, 25, speed, "GOING BACK TO BASE");
 //        ActionHelper.Rotate(90, speed, 3);
