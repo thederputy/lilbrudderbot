@@ -23,7 +23,7 @@ public class Phase1 {
          */
         int speedArc = 800;
         // Move forward into parking lot
-        ActionHelper.MotorGo(87, speed, 92, speed, "LEAVING THE BASE");
+        ActionHelper.MotorGo(87, speed, 87, speed, "LEAVING THE BASE");
         // Turn right
         ActionHelper.Rotate(-50, speed, 0.5);
         // Move to beach
