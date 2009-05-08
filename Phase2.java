@@ -21,9 +21,8 @@ public class Phase2 {
 
         //scoop corn and face back to cart switch
         ActionHelper.Rotate(175, speed, 0);
-        //turn left
-        //ActionHelper.Rotate(90, speed, 0.5);
-        ActionHelper.MotorGo(-13, speed, -13, speed, "REVERSE");
+        //back up to lever
+        ActionHelper.MotorGo(-11, speed, -11, speed, "REVERSE");
         //flick lever
         ActionHelper.Rotate(-25, speed, 0.5);
         //come back from flipping
