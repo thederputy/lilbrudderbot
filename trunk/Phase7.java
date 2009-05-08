@@ -28,20 +28,20 @@ public class Phase7 {
         // Turn right 90
         ActionHelper.Rotate(-90, turn, 0.5);
         // Forward
-        ActionHelper.MotorGo(120, speed, 120, speed, "GOING TO SATELLITE");
+        ActionHelper.MotorGo(110, speed, 110, speed, "GOING TO SATELLITE");
         // Turn left
-        ActionHelper.Rotate(90, turn, 0.5);
+        ActionHelper.Rotate(95, turn, 0.5);
         // Pushing lever
         ActionHelper.MotorGo(35, speed, 35, speed, "PUSHING LEVER");
         // Reverse
         ActionHelper.MotorGo(-35, speed, -35, speed, "PLANTING TREES");
         // Turning left
-        ActionHelper.Rotate(90, turn, 0.5);
+        ActionHelper.Rotate(95, turn, 0.5);
         // Forward to ramp
         ActionHelper.MotorGo(30, speed, 30, speed, "GOING TO RAMP");
         // Turn to line up with ramp
-        ActionHelper.Rotate(-90, turn, 0.5);
+        ActionHelper.Rotate(-95, turn, 0.5);
         // Go to power base
-        ActionHelper.MotorGo(180, speed, 180, speed, "GOING TO POWER BASE");
+        ActionHelper.MotorGo(160, speed, 160, speed, "GOING TO POWER BASE");
     }
 }
