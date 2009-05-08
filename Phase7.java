@@ -24,13 +24,13 @@ public class Phase7 {
         int turn = 300;
 
         // Leaving base
-        ActionHelper.MotorGo(65, speed, 65, speed, "LEAVING NANO BASE");
+        ActionHelper.MotorGo(50, speed, 50, speed, "LEAVING NANO BASE");
         // Turn right 90
-        ActionHelper.Rotate(-90, turn, 0.5);
+        ActionHelper.Rotate(-95, turn, 0.5);
         // Forward
-        ActionHelper.MotorGo(107, speed, 107, speed, "GOING TO SATELLITE");
+        ActionHelper.MotorGo(120, speed, 120, speed, "GOING TO SATELLITE");
         // Turn left
-        ActionHelper.Rotate(90, turn, 0.5);
+        ActionHelper.Rotate(95, turn, 0.5);
         // Pushing lever
         ActionHelper.MotorGo(25, speed, 25, speed, "PUSHING LEVER");
         // Reverse
@@ -42,6 +42,6 @@ public class Phase7 {
         // Turn to line up with ramp
         ActionHelper.Rotate(-90, turn, 0.5);
         // Go to power base
-        ActionHelper.MotorGo(150, speed, 150, speed, "GOING TO POWER BASE");
+        ActionHelper.MotorGo(200, speed, 200, speed, "GOING TO POWER BASE");
     }
 }
