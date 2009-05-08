@@ -16,7 +16,7 @@ public class Phase2 {
         //go towards corn
         ActionHelper.MotorGo(46, speed, 46, speed, "GO TOWARDS CORN");
         //turn towads corn and gather
-        ActionHelper.Rotate(-85, speed, 0);
+        ActionHelper.Rotate(-85, speed, 1);
         ActionHelper.MotorGo(17, speed, 17, speed, "GRAB CORN");
 
         //scoop corn and face back to cart switch
