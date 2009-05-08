@@ -120,19 +120,21 @@ public class ActionHelper {
             Motor.C.backward();
         }
         boolean stuck = false;
-        while (Motor.B.isMoving() || Motor.C.isMoving()) {
+        while ((Motor.B.isMoving() || Motor.C.isMoving()) && !stuck) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
+            stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) < 1 && Math.abs(Motor.C.getActualSpeed()) < 1)));
+            stuck = stuck && (((distb * Translation * mb) + (distc * Translation * mc)) / 4 < ((bc * mb) + (cc * mc))/2);
+            if (stuck) {
+                System.out.println("!!Stuck!!");
+            }
             if ((bc * mb) > (distb * Translation * mb)) {
                 Motor.B.stop();
             }
             if ((cc * mc) > (distc * Translation * mc)) {
                 Motor.C.stop();
             }
-            stuck = (stuck || (Math.abs(Motor.B.getActualSpeed()) < 1 && Math.abs(Motor.C.getActualSpeed()) < 1));
-            if (stuck) {
-                System.out.println("!!Stuck!!");
-            }
+            
             //try{Thread.sleep(10);}catch(Exception e) {}
         }
         Motor.B.stop();
