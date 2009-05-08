@@ -36,11 +36,11 @@ public class Phase7 {
         // Reverse
         ActionHelper.MotorGo(-35, speed, -35, speed, "PLANTING TREES");
         // Turning left
-        ActionHelper.Rotate(90, turn, 0.5);
+        ActionHelper.Rotate(95, turn, 0.5);
         // Forward to ramp
         ActionHelper.MotorGo(25, speed, 25, speed, "GOING TO RAMP");
-        // Turn to line up with ramp
-        ActionHelper.Rotate(-95, turn, 0.5);
+        // Turn right to line up with ramp
+        ActionHelper.Rotate(-90, turn, 0.5);
         // Go to power base
         ActionHelper.MotorGo(160, speed, 160, speed, "GOING TO POWER BASE");
     }
