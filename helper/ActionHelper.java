@@ -20,6 +20,8 @@ public class ActionHelper {
     private static int numActions = 0;
     public static int SecStart = 5;
 
+    public static IceThread chiptuner = new IceThread();
+
     private TachoNavigator nav;
 
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
