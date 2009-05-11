@@ -143,6 +143,32 @@ public class ActionHelper {
         Motor.C.stop();
     }
 
+    private static void Motor_SingleTN(int angle, int speed, Motor m) {
+        m.resetTachoCount();
+        int mb = ((angle > 0)?1:-1);
+        m.setSpeed(speed);
+        if (mb == 1) {
+            m.forward();
+        } else {
+            m.backward();
+        }
+        boolean stuck = false;
+        while ((m.isMoving()) && !stuck) {
+            int bc = m.getTachoCount();
+            stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) == 0 && Math.abs(Motor.C.getActualSpeed()) == 0)));
+            stuck = stuck && (((angle * mb)/2) < (bc * mb));
+            if (stuck) {
+                System.out.println("!!Stuck!!");
+            }
+            if ((bc * mb) > (angle * mb)) {
+                m.stop();
+            }
+
+            //try{Thread.sleep(10);}catch(Exception e) {}
+        }
+        m.stop();
+    }
+
     //Distance between the wheels 11.2cm
     //Radius of the wheels 2.89cm repeating of course
     //3.97580087233961 I din't know what this number is
