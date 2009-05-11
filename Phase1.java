@@ -23,26 +23,26 @@ public class Phase1 {
          */
         int turn = 250;
         // Move forward into parking lot
-        ActionHelper.MotorGo(89, speed, 89, speed, "LEAVING THE BASE");
+        ActionHelper.MotorGo(66, speed, 66, speed, "LEAVING THE BASE");
         // Turn right
         ActionHelper.Rotate(-50, turn, 0.5);
         // Move to beach
-        ActionHelper.MotorGo(79, speed, 79, speed, "DEPLOYING WAVE TURBINE");
+        ActionHelper.MotorGo(89, speed, 89, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(31, turn, 0.5);
+        ActionHelper.Rotate(15, turn, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
-        // Moving back to line with satellite
-        ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
-        // Turn right to line up with satellite
-        ActionHelper.Rotate(110, turn, 0.5);
-        // Go forward and hit satellite button
-        ActionHelper.MotorGo(-58, speed, -58, speed, "HITTING SATELLITE");
-        // Reverse back to truck
-        ActionHelper.MotorGo(40, speed, 40, speed, "MOVING BACK TO TRUCK");
-        // Turn to line up with base
-        ActionHelper.Rotate(45, turn, 0.5);
-        // Return to base
-        ActionHelper.MotorGo(60, speed, 60, speed,"PUSHING THE TRUCK");
+//        // Moving back to line with satellite
+//        ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
+//        // Turn right to line up with satellite
+//        ActionHelper.Rotate(110, turn, 0.5);
+//        // Go forward and hit satellite button
+//        ActionHelper.MotorGo(-58, speed, -58, speed, "HITTING SATELLITE");
+//        // Reverse back to truck
+//        ActionHelper.MotorGo(40, speed, 40, speed, "MOVING BACK TO TRUCK");
+//        // Turn to line up with base
+//        ActionHelper.Rotate(45, turn, 0.5);
+//        // Return to base
+//        ActionHelper.MotorGo(60, speed, 60, speed,"PUSHING THE TRUCK");
     }
 }
