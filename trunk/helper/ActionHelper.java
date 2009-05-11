@@ -18,7 +18,7 @@ public class ActionHelper {
     public static int maxretries = 3;
     public static int redfac = 6;
     private static int numActions = 0;
-    public static int SecStart = 5;
+    public static int SecStart = 3;
 
     public static IceThread chiptuner = new IceThread();
 
