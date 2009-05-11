@@ -12,6 +12,8 @@ public class Phase2 {
         int speed = 500;
         int retspeed = 800;
         ActionHelper.Start();
+        //move forward 3 cm
+        ActionHelper.MotorGo(3, speed, 3, speed);
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
