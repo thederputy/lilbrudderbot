@@ -25,7 +25,7 @@ public class Phase1 {
         // Move forward into parking lot
         ActionHelper.MotorGo(66, speed, 66, speed, "LEAVING THE BASE");
         // Turn right
-        ActionHelper.Rotate(-50, turn, 0.5);
+        ActionHelper.Rotate(-50, turn, 0);
         // Move to beach
         ActionHelper.MotorGo(89, speed, 89, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
