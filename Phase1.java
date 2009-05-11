@@ -23,11 +23,11 @@ public class Phase1 {
          */
         int turn = 250;
         // Move forward into parking lot
-        ActionHelper.MotorGo(89, speed, 89, speed, "LEAVING THE BASE");
+        ActionHelper.MotorGo(93, speed, 93, speed, "LEAVING THE BASE");
         // Turn right
         ActionHelper.Rotate(-65, turn, 0);
         // Move to beach
-        ActionHelper.MotorGo(62, speed, 62, speed, "DEPLOYING WAVE TURBINE");
+        ActionHelper.MotorGo(58, speed, 58, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
         ActionHelper.Rotate(45, turn, 0.5);
         // Reverse to push truck
