@@ -1,4 +1,4 @@
-
+import lejos.nxt.*;
 import helper.ActionHelper;
 
 /*
@@ -19,7 +19,7 @@ public class Phase3 {
     //Stopping and waiting for oil barrels
     //try{Thread.sleep(750);}catch(Exception e) {}
     //Hit oil barrels
-    ActionHelper.Motor_Single(12, 500, Motor.A);
+    ActionHelper.MotorSingle(12, 500, Motor.A);
     //Returning to base
     ActionHelper.MotorGo(-120, speed, -120, speed, "Returning");
     }
