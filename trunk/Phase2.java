@@ -27,7 +27,7 @@ public class Phase2 {
         //back up to lever
         ActionHelper.MotorGo(-10, speed, -10, speed, "BASH THE SWITCH!");
         //flick lever
-        ActionHelper.Rotate(-27, speed, 0.5);
+        ActionHelper.Rotate(-28, speed, 0.5);
         //head toward Uranium
         ActionHelper.MotorGo(60, speed, 60, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base

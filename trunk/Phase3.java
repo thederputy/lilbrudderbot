@@ -12,7 +12,7 @@ import helper.ActionHelper;
  */
 public class Phase3 {
     public static void main(String[] args) {
-    int speed = 400;
+    int speed = 500;
     ActionHelper.Start();
     //Initially traveling toward oil rig
     ActionHelper.MotorGo(120, speed, 120, speed, "Heading to Oil Rig");
