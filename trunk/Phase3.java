@@ -17,7 +17,7 @@ public class Phase3 {
     //Initially traveling toward oil rig
     ActionHelper.MotorGo(125, speed, 125, speed, "Heading to Oil Rig");
     //Hit oil barrels
-    ActionHelper.MotorSingle(12, 500, Motor.A);
+    ActionHelper.MotorSingle(300, 500, Motor.A);
     //Stopping and waiting for oil barrels
     try{Thread.sleep(750);}catch(Exception e) {}
     //Returning to base
