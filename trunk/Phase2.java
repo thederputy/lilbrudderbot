@@ -12,7 +12,7 @@ public class Phase2 {
         int speed = 500;
         int retspeed = 800;
         ActionHelper.Start();
-        //move forward 3 cm
+        //move forward 4 cm
         ActionHelper.MotorGo(4, speed, 4, speed);
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
@@ -23,7 +23,7 @@ public class Phase2 {
         ActionHelper.MotorGo(17, speed, 17, speed, "GRAB CORN");
 
         //scoop corn and face back to cart switch
-        ActionHelper.Rotate(180, speed, .5);
+        ActionHelper.Rotate(190, speed, .5);
         //back up to lever
         /*ActionHelper.MotorGo(-9, speed, -9, speed, "BASH THE SWITCH!");
         //flick lever
