@@ -25,9 +25,9 @@ public class Phase2 {
         //scoop corn and face back to cart switch
         ActionHelper.Rotate(195, speed, .0);
         //back up to lever
-        ActionHelper.MotorGo(-8, speed, -8, speed, "BASH THE SWITCH!");
+        ActionHelper.MotorGo(-10, speed, -10, speed, "BASH THE SWITCH!");
         //flick lever
-        ActionHelper.Rotate(-20, speed, 0.5);
+        ActionHelper.Rotate(-25, speed, 0.5);
         //head toward Uranium
         /*ActionHelper.MotorGo(64, speed, 64, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base
