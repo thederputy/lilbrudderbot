@@ -143,7 +143,7 @@ public class ActionHelper {
         Motor.C.stop();
     }
 
-    private static void Motor_SingleTN(int angle, int speed, Motor m) {
+    public static void MotorSingle(int angle, int speed, Motor m) {
         m.resetTachoCount();
         int mb = ((angle > 0)?1:-1);
         m.setSpeed(speed);
