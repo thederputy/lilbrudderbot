@@ -2,6 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+import lejos.nxt.Button;
 import helper.ActionHelper;
 /**
  * <p>This class is for phase 1.
@@ -28,12 +29,13 @@ public class Phase1 {
         // Turn right
         ActionHelper.Rotate(-65, turn, 0);
         // Move to beach
-        ActionHelper.MotorGo(60, speed, 58, speed, "DEPLOYING WAVE TURBINE");
+        ActionHelper.MotorGo(62, speed, 62, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
-        ActionHelper.Rotate(45, turn, 0.5);
+        ActionHelper.Rotate(50, turn, 0.5);
         // Reverse to push truck
-        ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
-//        // Moving back to line with satellite
+        ActionHelper.MotorGo(-120, speed, -120, speed, "PUSHING TRUCK");
+        Button.waitForPress();
+        // Moving back to line with satellite
 //        ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
 //        // Turn right to line up with satellite
 //        ActionHelper.Rotate(110, turn, 0.5);
