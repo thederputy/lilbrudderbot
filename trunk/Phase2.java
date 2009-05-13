@@ -17,7 +17,7 @@ public class Phase2 {
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
-        ActionHelper.MotorGo(53, speed, 53, speed, "GO TOWARDS CORN");
+        ActionHelper.MotorGo(55, speed, 55, speed, "GO TOWARDS CORN");
         //turn towads corn and gather
         ActionHelper.Rotate(-85, speed, 0);
         ActionHelper.MotorGo(10, speed, 10, speed, "GRAB CORN");
@@ -27,13 +27,13 @@ public class Phase2 {
         //back up to lever
         ActionHelper.MotorGo(-5, speed, -5, speed, "BASH THE SWITCH!");
         //flick lever
-        ActionHelper.Rotate(-30, speed, 1);
+        ActionHelper.Rotate(-30, speed, 0);
         //head toward Uranium
-        /*ActionHelper.MotorGo(60, speed, 60, speed, "SCOOPING URANIUM");
+        ActionHelper.MotorGo(58, speed, 58, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base
-        ActionHelper.Rotate(150, 200, .5);
+       ActionHelper.Rotate(130, 200, 0.5);
         //return to base
-        ActionHelper.MotorGo(120, retspeed, 120, retspeed, "RETURNING TO BASE");
+         /*ActionHelper.MotorGo(120, retspeed, 120, retspeed, "RETURNING TO BASE");
         */
     }
 }
