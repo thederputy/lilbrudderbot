@@ -18,9 +18,9 @@ public class Phase5 {
         //push power lines
         ActionHelper.Rotate(-30, speed, 2.5);
         //go towards power plant
-        ActionHelper.MotorGo(-20, speed, -20, speed, "PLACING THE POWER LINES");
+        ActionHelper.MotorGo(-22, speed, -22, speed, "PLACING THE POWER LINES");
         //go home
-        ActionHelper.MotorGo(20, retspeed, 20, retspeed, "GOIN' HOME");
+        ActionHelper.MotorGo(22, retspeed, 22, retspeed, "GOIN' HOME");
         ActionHelper.Rotate(30, retspeed, 2.5);
         ActionHelper.MotorGo(40, retspeed, 40, retspeed, "GOIN' HOME");
     }
