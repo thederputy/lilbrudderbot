@@ -29,12 +29,11 @@ public class Phase1 {
         // Turn right
         ActionHelper.Rotate(-65, speed, 0); 
         // Move to beach
-        ActionHelper.MotorGo(62, speed, 62, speed, "DEPLOYING WAVE TURBINE");
+        ActionHelper.MotorGo(61, speed, 61, speed, "DEPLOYING WAVE TURBINE");
         // Turn to line up with truck
         ActionHelper.Rotate(50, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
-        Button.waitForPress();
         // Moving back to line with satellite
 //        ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
 //        // Turn right to line up with satellite
