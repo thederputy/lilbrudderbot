@@ -9,8 +9,7 @@ import helper.ActionHelper;
  * It does these things:
  *      - drops off the wave turbine
  *      - pushes the truck back to the base
- *      - pushes one of the sattelite levers
- *      - goes back to base.</p>
+ * </p>
  * @author Ira
  */
 public class Phase1 {
@@ -22,7 +21,6 @@ public class Phase1 {
         /**
          * <p>The speed of the motor when arcing.</p>
          */
-        int turn = 250;
         ActionHelper.Start();
         // Move forward into parking lot
         ActionHelper.MotorGo(95, speed, 95, speed, "LEAVING THE BASE");
@@ -34,17 +32,5 @@ public class Phase1 {
         ActionHelper.Rotate(50, speed, 0.5);
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
-        // Moving back to line with satellite
-//        ActionHelper.MotorGo(40, speed, 40, speed, "LINING WITH SATELLITE");
-//        // Turn right to line up with satellite
-//        ActionHelper.Rotate(110, turn, 0.5);
-//        // Go forward and hit satellite button
-//        ActionHelper.MotorGo(-58, speed, -58, speed, "HITTING SATELLITE");
-//        // Reverse back to truck
-//        ActionHelper.MotorGo(40, speed, 40, speed, "MOVING BACK TO TRUCK");
-//        // Turn to line up with base
-//        ActionHelper.Rotate(45, turn, 0.5);
-//        // Return to base
-//        ActionHelper.MotorGo(60, speed, 60, speed,"PUSHING THE TRUCK");
     }
 }
