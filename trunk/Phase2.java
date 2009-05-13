@@ -31,7 +31,7 @@ public class Phase2 {
         //head toward Uranium
         ActionHelper.MotorGo(58, speed, 58, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base
-       ActionHelper.Rotate(130, 200, 0.5);
+       ActionHelper.Rotate(130, 200, 0);
         //return to base
          /*ActionHelper.MotorGo(120, retspeed, 120, retspeed, "RETURNING TO BASE");
         */
