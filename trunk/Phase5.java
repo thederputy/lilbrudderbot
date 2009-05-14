@@ -6,6 +6,7 @@ import helper.ActionHelper;
 /**
  *
  * @author Cake Zombi
+ * @author Jacob Kwitkoski
  */
 public class Phase5 {
     
@@ -21,7 +22,7 @@ public class Phase5 {
         ActionHelper.MotorGo(-22, speed, -22, speed, "PLACING THE POWER LINES");
         //go home
         ActionHelper.MotorGo(22, retspeed, 22, retspeed, "GOIN' HOME");
-        ActionHelper.Rotate(33, retspeed, 2.5);
+        ActionHelper.Rotate(28, retspeed, 2.5);
         ActionHelper.MotorGo(40, retspeed, 40, retspeed, "GOIN' HOME");
     }
 }

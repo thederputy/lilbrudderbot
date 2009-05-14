@@ -13,9 +13,9 @@ public class Phase4 {
         int retspeed = 650;
         ActionHelper.Start();
         //pick up dam and leave base
-        ActionHelper.MotorGo(-20, speed, -20, speed, "GRABBIN' THE DAM!");
+        ActionHelper.MotorGo(-23, speed, -23, speed, "GRABBIN' THE DAM!");
         //turn toward dam
-        ActionHelper.Rotate(-75, speed, 2);
+        ActionHelper.Rotate(-90, speed, 2);
         //go towards river
         ActionHelper.MotorGo(-43, speed, -43, speed, "PLACING THE DAM");
         //retun to base
@@ -23,7 +23,7 @@ public class Phase4 {
 
         ActionHelper.Rotate(75, retspeed, 2);
 
-        ActionHelper.MotorGo(20, retspeed, 20, retspeed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(23, retspeed, 23, retspeed, "RETURNING TO BASE");
         
     }
 
