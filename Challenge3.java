@@ -39,8 +39,8 @@ public class Challenge3 {
                 ActionHelper.Rotate(90, 500, 1);
             }
         }
-        else {
-                
+        else{
+            ActionHelper.Rotate(-5, 500, 0.5);
         }
     }
 
