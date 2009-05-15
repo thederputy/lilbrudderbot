@@ -19,6 +19,18 @@ public class Challenge3 {
       return leftTouch.isPressed();
     }
 
+    public static void foundWall() {
+        if (Challenge3.state == 0) {
+            Challenge3.state = 1;
+        }
+    }
+
+    public static void inBase() {
+        if (Challenge3.state == 1) {
+            Challenge3.state = 2;
+        }
+    }
+
     public void onWall(boolean buttonPressed){
         if (buttonPressed){
             Motor.A.forward();
@@ -30,7 +42,19 @@ public class Challenge3 {
         }
     }
 
-    
+    public static void main(String[] args) {
+        while (Challenge3.state == 0) {
+            // seeking wall behavior
+        }
 
+        while (Challenge3.state == 1) {
+            // on wall behavior
+            if (ActionHelper.isInBase()) {
+                inBase();
+            }
+        }
+
+        //in base
+    }
 
 }
