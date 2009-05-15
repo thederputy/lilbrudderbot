@@ -33,6 +33,8 @@ public class Challenge3 {
 
     public void onWall(boolean buttonPressed){
         if (buttonPressed){
+            Motor.A.setSpeed(500);
+            Motor.B.setSpeed(500);
             Motor.A.forward();
             Motor.B.forward();
             if (sonic.getDistance() == 2){
@@ -40,7 +42,7 @@ public class Challenge3 {
             }
         }
         else{
-            ActionHelper.Rotate(-5, 500, 0.5);
+            ActionHelper.Rotate(90,500, 0.5);
         }
     }
 
