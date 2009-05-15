@@ -20,10 +20,18 @@ public class ActionHelper {
     private static int numActions = 0;
     public static int SecStart = 3;
 
+    private static int destX = 1500;
+    private static boolean useDest = true;
+
     public static IceThread chiptuner = new IceThread();
 
-    private static TachoNavigator nav = new TachoNavigator(56, 112, Motor.C, Motor.B, false);
 
+    public static TachoNavigator nav = new TachoNavigator(56, 112, Motor.C, Motor.B, false);
+
+
+    public static boolean isInBase() {
+        return (useDest && (nav.getX() > ActionHelper.destX));
+    }
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -107,6 +115,7 @@ public class ActionHelper {
     private static void MotorTN(int distc, int speedc, int distb, int speedb) {
         Motor.B.resetTachoCount();
         Motor.C.resetTachoCount();
+        System.out.println("x: " + nav.getX() + " y: " + nav.getY());
         int mb = ((distb > 0)?1:-1);
         int mc = ((distc > 0)?1:-1);
         Motor.B.setSpeed(speedb);
@@ -138,6 +147,10 @@ public class ActionHelper {
             }
             
             //try{Thread.sleep(10);}catch(Exception e) {}
+            if (isInBase()) {
+                System.out.println("IM INNA BASE LULS");
+                break;
+            }
         }
         Motor.B.stop();
         Motor.C.stop();
@@ -280,6 +293,7 @@ public class ActionHelper {
     }
 
     public static void Start() {
+        System.out.println("x: " + nav.getX() + " y: " + nav.getY());
         for (int nsec = 0; nsec < ActionHelper.SecStart; nsec++) {
             System.out.println("" + (ActionHelper.SecStart - nsec) + "...");
             try{Thread.sleep(200);}catch(Exception e) {}
