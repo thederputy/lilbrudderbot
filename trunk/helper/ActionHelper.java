@@ -22,7 +22,7 @@ public class ActionHelper {
 
     public static IceThread chiptuner = new IceThread();
 
-    private TachoNavigator nav;
+    private static TachoNavigator nav = new TachoNavigator(56, 112, Motor.C, Motor.B, false);
 
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
@@ -141,6 +141,8 @@ public class ActionHelper {
         }
         Motor.B.stop();
         Motor.C.stop();
+        nav.updatePosition();
+        System.out.println("x: " + nav.getX() + " y: " + nav.getY());
     }
 
     public static void MotorSingle(int angle, int speed, Motor m) {
