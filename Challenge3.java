@@ -21,7 +21,9 @@ public class Challenge3 {
 
     public void onWall(boolean buttonPressed){
         if (buttonPressed){
-
+            Motor.A.forward();
+            Motor.B.forward();
+            if ()
         }
         else {
 
