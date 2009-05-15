@@ -11,12 +11,12 @@ import helper.ActionHelper;
  */
 public class Challenge3 {
     UltrasonicSensor sonic = new UltrasonicSensor(SensorPort.S1);
-    TouchSensor leftTouch = new TouchSensor(SensorPort.S2);
+    TouchSensor Touch = new TouchSensor(SensorPort.S2);
     LightSensor light = new LightSensor(SensorPort.S3);
     public static int state = 0;
 
     public boolean buttonPressed() {
-      return leftTouch.isPressed();
+      return Touch.isPressed();
     }
 
     public static void foundWall() {
@@ -35,16 +35,19 @@ public class Challenge3 {
         if (buttonPressed){
             Motor.A.forward();
             Motor.B.forward();
-            if ()
+            if (sonic.getDistance() == 2){
+                ActionHelper.Rotate(90, 500, 1);
+            }
         }
         else {
-
+                
         }
     }
 
     public static void main(String[] args) {
         while (Challenge3.state == 0) {
             // seeking wall behavior
+            Challenge3.foundWall();
         }
 
         while (Challenge3.state == 1) {
