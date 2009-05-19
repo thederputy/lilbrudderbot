@@ -42,7 +42,7 @@ public class Challenge3 {
             }
         }
         else{
-            ActionHelper.Rotate(90,500, 0.5);
+            ActionHelper.Rotate(-90,500, 0.5);
         }
     }
 
@@ -54,6 +54,7 @@ public class Challenge3 {
 
         while (Challenge3.state == 1) {
             // on wall behavior
+            
             if (ActionHelper.isInBase()) {
                 inBase();
             }
