@@ -32,10 +32,10 @@ public class Phase2 {
         //head toward Uranium
         ActionHelper.MotorGo(58, speed, 58, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base
-       ActionHelper.Rotate(140, 200, 0);
+        ActionHelper.Rotate(140, 200, 0);
         //return to base
-       ActionHelper.MotorGo(115, speed, 115, speed, "RETURNING TO BASE");
+        ActionHelper.MotorGo(115, speed, 115, speed, "RETURNING TO BASE");
         //throw corn at the wall
-       ActionHelper.Rotate(180, retspeed, 0.5);
+        ActionHelper.Rotate(180, retspeed, 0.5);
     }
 }
