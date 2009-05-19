@@ -14,7 +14,7 @@ public class Phase2 {
         //ActionHelper.chiptuner.start();
         ActionHelper.Start();
         //move forward 4 cm
-        ActionHelper.MotorGo(4, speed, 4, speed);
+        ActionHelper.MotorGo(3, speed, 3, speed);
         //turn right and leave base
         ActionHelper.Rotate(-90, speed, -2.75);
         //go towards corn
