@@ -147,10 +147,6 @@ public class ActionHelper {
             }
             
             //try{Thread.sleep(10);}catch(Exception e) {}
-            if (isInBase()) {
-                System.out.println("IM INNA BASE LULS");
-                break;
-            }
         }
         Motor.B.stop();
         Motor.C.stop();
