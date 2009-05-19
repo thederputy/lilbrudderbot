@@ -32,7 +32,7 @@ public class Phase6 {
         //go out from the base and cross the bridge
         ActionHelper.MotorGo(165, SPEED, 165, SPEED, "CROSSING BRIDGE");
         //turn right to face the pizza molecules
-        ActionHelper.Rotate(-98, SPEED, 0.5, "");
+        ActionHelper.Rotate(-98, SPEED, 0.5, "TURNING");
         //go forward to scoop the pizza molecules
         ActionHelper.MotorGo(50, SPEED, 50, SPEED, "SCOOPING PIZZA");
         //turn left to hit the elevator
