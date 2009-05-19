@@ -131,7 +131,7 @@ public class ActionHelper {
             Motor.C.backward();
         }
         boolean stuck = false;
-        while ((Motor.B.isMoving() || Motor.C.isMoving()) && !stuck) {
+        while ((Motor.B.isMoving() || Motor.C.isMoving()) && true) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
             stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) == 0 && Math.abs(Motor.C.getActualSpeed()) == 0)));
@@ -155,7 +155,6 @@ public class ActionHelper {
         Motor.B.stop();
         Motor.C.stop();
         nav.updatePosition();
-        System.out.println("x: " + nav.getX() + " y: " + nav.getY());
     }
 
     public static void MotorSingle(int angle, int speed, Motor m) {
