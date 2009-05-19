@@ -131,7 +131,7 @@ public class ActionHelper {
             Motor.C.backward();
         }
         boolean stuck = false;
-        while ((Motor.B.isMoving() || Motor.C.isMoving()) && true) {
+        while ((Motor.B.isMoving() || Motor.C.isMoving()) && !stuck) {
             int bc = Motor.B.getTachoCount();
             int cc = Motor.C.getTachoCount();
             stuck = ((stuck || (Math.abs(Motor.B.getActualSpeed()) == 0 && Math.abs(Motor.C.getActualSpeed()) == 0)));
