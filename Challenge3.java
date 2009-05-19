@@ -12,7 +12,7 @@ import helper.ActionHelper;
 public class Challenge3 {
     UltrasonicSensor sonic = new UltrasonicSensor(SensorPort.S1);
     TouchSensor Touch = new TouchSensor(SensorPort.S2);
-    LightSensor light = new LightSensor(SensorPort.S3);
+    LightSensor light = new LightSensor(SensorPort.S3, false);
     public static int state = 0;
 
     public boolean buttonPressed() {
@@ -49,7 +49,7 @@ public class Challenge3 {
     public static void main(String[] args) {
         while (Challenge3.state == 0) {
             // seeking wall behavior
-            Challenge3.foundWall();
+            FindWall.TrackWall();
         }
 
         while (Challenge3.state == 1) {
