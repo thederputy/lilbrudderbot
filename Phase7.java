@@ -3,9 +3,6 @@
  * and open the template in the editor.
  */
 import helper.ActionHelper;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import lejos.nxt.*;
 /**
  * <p>This class is for phase 7.
  * It does these things:
@@ -67,6 +64,6 @@ public class Phase7 {
         ActionHelper.MotorGo(-30, back, -30, back, "GO BACK");
         ActionHelper.Rotate(30, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
-        ActionHelper.chiptuner.Victory();
+        //ActionHelper.chiptuner.Victory();
     }
 }

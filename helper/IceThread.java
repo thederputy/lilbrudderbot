@@ -54,7 +54,7 @@ public class IceThread extends Thread {
 
     public void Victory() {
         setChipTune(victory);
-        setPitch(2);
+        setPitch(8);
         this.start();
     }
 
