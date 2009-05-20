@@ -33,6 +33,6 @@ public class Phase1 {
         // Reverse to push truck
         ActionHelper.MotorGo(-125, speed, -125, speed, "PUSHING TRUCK");
         // Victory swing truck into base, for the win
-        ActionHelper.Rotate(-100, 800, 0.5);
+        ActionHelper.Rotate(-140, 899, 0.5);
     }
 }
