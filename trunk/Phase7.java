@@ -3,6 +3,8 @@
  * and open the template in the editor.
  */
 import helper.ActionHelper;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import lejos.nxt.*;
 /**
  * <p>This class is for phase 7.
@@ -49,18 +51,21 @@ public class Phase7 {
         ActionHelper.Rotate(-95, turn, 0.5);
         // Go to power base 
         ActionHelper.MotorGo(160, speed, 160, speed, "GOING TO POWER BASE");
-        Button.waitForPress();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+        }
         // Turn right to go towards the second satellite lever
-        ActionHelper.Rotate(-150, speed, 0.5, "TURNING RIGHT");
+        ActionHelper.Rotate(-140, speed, 0.5, "TURNING RIGHT");
         // Go forwards towards the second satellite lever
-        ActionHelper.MotorGo(60, speed, 60, speed, "GOING TOWARDS SATELLITE");
+        ActionHelper.MotorGo(65, speed, 65, speed, "GOING TOWARDS SATELLITE");
         // Line up with the satellite
-        ActionHelper.Rotate(-30, speed, 0.5, "FACE SATELLITE");
+        ActionHelper.Rotate(-40, speed, 0.5, "FACE SATELLITE");
         // Hit the satellite lever
-        ActionHelper.MotorGo(25, speed, 25, speed, "HIT THE SATELLITE");
+        ActionHelper.MotorGo(30, speed, 30, speed, "HIT THE SATELLITE");
         // The following actions are a reverse of the going to satellite.
-        ActionHelper.MotorGo(-25, back, -25, back, "GO BACK");
-        ActionHelper.Rotate(30, back, 0.5, "GO BACK");
+        ActionHelper.MotorGo(-30, back, -30, back, "GO BACK");
+        ActionHelper.Rotate(40, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
     }
 }
