@@ -29,6 +29,15 @@ public class IceThread extends Thread {
     0,92, 165,1, 65,12, 0,2, 165,1, 65,12, 0,2, 65,13, 0,2, 65,42,
     0,2, 52,43, 0,2, 175,1, 58,43, 0,2, 65,13, 0,17, 58,12, 0,2,
     175,1, 65,134, };
+
+    private int[] pacman = {
+    247,7, 0,7, 494,7, 0,7, 370,7, 0,7, 311,7, 0,7, 494,7, 370,7,
+    0,14, 311,21, 0,7, 262,7, 0,7, 523,7, 0,7, 392,7, 0,7, 330,7,
+    0,7, 523,7, 392,7, 0,14, 330,21, 0,7, 247,7, 0,7, 494,7, 0,7,
+    370,7, 0,7, 311,7, 0,7, 494,7, 370,7, 0,14, 311,21, 0,7, 311,7,
+    330,7, 349,7, 0,7, 349,7, 370,7, 392,7, 0,7, 392,7, 415,7, 440,7,
+    0,7, 494,14, };
+    
     private double pitch = 1;
     public IceThread() {
         
@@ -55,6 +64,12 @@ public class IceThread extends Thread {
     public void Victory() {
         setChipTune(victory);
         setPitch(8);
+        this.start();
+    }
+
+    public void Pacman() {
+        setChipTune(pacman);
+        setPitch(1.6);
         this.start();
     }
 
