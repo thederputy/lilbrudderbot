@@ -11,7 +11,7 @@ public class Phase2 {
     public static void main(String[] args) {
         int speed = 500;
         int retspeed = 800;
-        ActionHelper.chiptuner.start();
+        //ActionHelper.chiptuner.start();
         ActionHelper.Start();
         //move forward 4 cm
         //ActionHelper.MotorGo(3, speed, 3, speed);
@@ -30,7 +30,7 @@ public class Phase2 {
         //flick lever
         ActionHelper.Rotate(-30, speed, 0);
         //head toward Uranium
-        ActionHelper.MotorGo(58, speed, 58, speed, "SCOOPING URANIUM");
+        ActionHelper.MotorGo(59, speed, 59, speed, "SCOOPING URANIUM");
         //scoop Uranium and point toward base
         ActionHelper.Rotate(140, 200, 0);
         //return to base
