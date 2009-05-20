@@ -29,11 +29,11 @@ public class Phase7 {
         int back = 800;
         ActionHelper.Start();
         // Leaving base
-        ActionHelper.MotorGo(55, speed, 55, speed, "LEAVING NANO BASE");
-        // Turn right 90
-        ActionHelper.Rotate(-90, turn, 0.5);
+        ActionHelper.MotorGo(40, speed, 40, speed, "LEAVE BASE");
+        // Turn right 90 degrees using the arc method
+        ActionHelper.Arc(-90, speed, -20, "TURNING");
         // Forward
-        ActionHelper.MotorGo(120, speed, 120, speed, "GOING TO SATELLITE");
+        ActionHelper.MotorGo(100, speed, 100, speed, "GOING TO SATELLITE");
         // Turn left
         ActionHelper.Rotate(95, turn, 0.5);
         // Pushing lever
