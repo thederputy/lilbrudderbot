@@ -37,7 +37,7 @@ public class IceThread extends Thread {
     }
 
     public void playTune() {
-        Sound.setVolume(11);
+        Sound.setVolume(100);
         for (int i = 0; i < chiptune.length; i += 2) {
             final int w = chiptune[i+1];
             final int n = chiptune[i];
