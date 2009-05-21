@@ -13,25 +13,65 @@ import lejos.util.*;
  * @author Austin
  */
 public class ActionHelper {
+    /**
+     * The translation factor between degrees and centimeters travelled
+     */
     public static double Translation = 20.4627783975293;
+    /**
+     * The acceleration factor for v1 of the motorgo method
+     */
     public static int accfactor = 2;
+    /**
+     * The maximum number of times per motor v1 is allowed to retry
+     */
     public static int maxretries = 3;
+    /**
+     * The speed reduction factor
+     */
     public static int redfac = 6;
+    /**
+     * the number of actions taken so far (does not work)
+     */
     private static int numActions = 0;
-    public static int SecStart = 3;
+    /**
+     * Number of ticks before start.
+     * 1 tick = 200ms
+     */
+    public static int SecStart = 2;
 
+    /**
+     * x value of goal area for maze challenge
+     */
     private static int destX = 1500;
+    /**
+     * Whether or not we are doing the maze challenge
+     */
     private static boolean useDest = true;
 
+    /**
+     * The thread for playing kickin' rad songs
+     */
     public static IceThread chiptuner = new IceThread();
 
-
+    /**
+     * Records the coordinates of the robot
+     */
     public static TachoNavigator nav = new TachoNavigator(56, 112, Motor.C, Motor.B, false);
 
-
+    /**
+     * Get whether or not the robot is in the end base
+     * @return is in the base
+     */
     public static boolean isInBase() {
         return (useDest && (nav.getX() > ActionHelper.destX));
     }
+    /**
+     * The old motor method, with a simple error correction algorithm
+     * @param distc the distance for motor c to travel
+     * @param speedc the speed for motor c to travel at
+     * @param distb the distance for motor b to travel
+     * @param speedb the speed for motor b to travel at
+     */
     private static void MotorST(int distc, int speedc, int distb, int speedb) {
         int udistb = (int) (distb * ActionHelper.Translation);
         int udistc = (int) (distc * ActionHelper.Translation);
@@ -112,6 +152,14 @@ public class ActionHelper {
         }
     }
 
+    /**
+     * New core motor method. Uses motor's own error correction.
+     * Slightly more succeptible to drag.
+     * @param distc the distance for motor c to travel
+     * @param speedc the speed for motor c to travel at
+     * @param distb the distance for motor b to travel
+     * @param speedb the speed for motor b to travel at
+     */
     private static void MotorTN(int distc, int speedc, int distb, int speedb) {
         Motor.B.resetTachoCount();
         Motor.C.resetTachoCount();
@@ -153,6 +201,12 @@ public class ActionHelper {
         nav.updatePosition();
     }
 
+    /**
+     * Move a single motor by a specified angle
+     * @param angle the angle to move
+     * @param speed the speed to move at
+     * @param m the motor to use
+     */
     public static void MotorSingle(int angle, int speed, Motor m) {
         m.resetTachoCount();
         int mb = ((angle > 0)?1:-1);
@@ -276,10 +330,17 @@ public class ActionHelper {
         System.out.println(debug);
         ActionHelper.MotorGo(distc, speedc, distb, speedb);
     }
+    /**
+     * This method brings the robot to a complete stop.
+     */
     public static void Stop() {
         ActionHelper.MotorGo(0, 300, 0, 300);
     }
 
+    /**
+     * Pauses the robot for a given duration, and prints elipses to the console
+     * @param millis the pause in milliseconds
+     */
     public static void Pause(int millis) {
         for (int nsec = 0; nsec < 10; nsec++) {
             System.out.println("" + (ActionHelper.SecStart - nsec) + "...");
@@ -287,6 +348,10 @@ public class ActionHelper {
         }
     }
 
+    /**
+     * The method to initialise various parts of the robot.
+     * also provides a delay to allow you to get your hand out of the way.
+     */
     public static void Start() {
         System.out.println("x: " + nav.getX() + " y: " + nav.getY());
         for (int nsec = 0; nsec < ActionHelper.SecStart; nsec++) {
