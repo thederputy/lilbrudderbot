@@ -27,6 +27,7 @@ public class Phase7 {
          * hit.</p>
          */
         int back = 800;
+        // Make sure it doesn't jump
         ActionHelper.Start();
         // Leaving base
         ActionHelper.MotorGo(40, speed, 40, speed, "LEAVE BASE");
@@ -59,9 +60,9 @@ public class Phase7 {
         // Line up with the satellite
         ActionHelper.Rotate(-30, speed, 0.5, "FACE SATELLITE");
         // Hit the satellite lever
-        ActionHelper.MotorGo(30, speed, 30, speed, "HIT THE SATELLITE");
+        ActionHelper.MotorGo(35, speed, 35, speed, "HIT THE SATELLITE");
         // The following actions are a reverse of the going to satellite.
-        ActionHelper.MotorGo(-30, back, -30, back, "GO BACK");
+        ActionHelper.MotorGo(-35, back, -35, back, "GO BACK");
         ActionHelper.Rotate(30, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
         //ActionHelper.chiptuner.Victory();
