@@ -54,17 +54,17 @@ public class Phase7 {
         } catch (InterruptedException ex) {
         }
         // Turn right to go towards the second satellite lever
-        ActionHelper.Rotate(-150, speed, 0.5, "TURNING RIGHT");
+        ActionHelper.Rotate(-150, back, 0.5, "TURNING RIGHT");
         // Go forwards towards the second satellite lever
-        ActionHelper.MotorGo(60, speed, 60, speed, "GOING TOWARDS SATELLITE");
+        ActionHelper.MotorGo(60, back, 60, back, "GOING TOWARDS SATELLITE");
         // Line up with the satellite
-        ActionHelper.Rotate(-30, speed, 0.5, "FACE SATELLITE");
+        ActionHelper.Rotate(-30, back, 0.5, "FACE SATELLITE");
         // Hit the satellite lever
-        ActionHelper.MotorGo(35, speed, 35, speed, "HIT THE SATELLITE");
+        ActionHelper.MotorGo(35, back, 35, back, "HIT THE SATELLITE");
         // The following actions are a reverse of the going to satellite.
         ActionHelper.MotorGo(-35, back, -35, back, "GO BACK");
         ActionHelper.Rotate(30, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
-        //ActionHelper.chiptuner.Victory();
+        ActionHelper.chiptuner.Victory();
     }
 }
