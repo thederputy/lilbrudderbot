@@ -8,6 +8,7 @@ del Phase4.class
 del Phase5.class
 del Phase6.class
 del Phase7.class
+del Phase8.class
 del Phase1.nxj
 del Phase2.nxj
 del Phase3.nxj
