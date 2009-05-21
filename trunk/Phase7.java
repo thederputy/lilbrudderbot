@@ -11,7 +11,8 @@ import lejos.nxt.Button;
  *      - Hits the lever
  *      - Drops trees at satellite
  *      - Returns to power base with pizza (yum!).</p>
- * @author Ira
+ * @author Ira Grunwell
+ * @author Jacob Kwitkoski
  */
 public class Phase7 {
     public static void main(String[] args) {
@@ -66,6 +67,11 @@ public class Phase7 {
         ActionHelper.MotorGo(-35, back, -35, back, "GO BACK");
         ActionHelper.Rotate(30, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
+        // press the button after the car is lined up
+        Button.waitForPress();
+        // push the car to the house
+        ActionHelper.MotorGo(95, back, 95, back, "PUSH CAR");
+        // Final Fantasy Victory music!!!!
         ActionHelper.chiptuner.Victory();
        }
 }
