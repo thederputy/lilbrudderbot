@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 import helper.ActionHelper;
+import lejos.nxt.Button;
 /**
  * <p>This class is for phase 7.
  * It does these things:
@@ -66,5 +67,7 @@ public class Phase7 {
         ActionHelper.Rotate(30, back, 0.5, "GO BACK");
         ActionHelper.MotorGo(-60, back, -60, back, "GO BACK");
         ActionHelper.chiptuner.Victory();
+        Button.waitForPress();
+        Phase8.main(args);
     }
 }

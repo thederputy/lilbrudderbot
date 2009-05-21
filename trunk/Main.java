@@ -18,9 +18,9 @@ public class Main {
         System.out.println("P3");
         Button.waitForPress();
         Phase3.main(args);
-        System.out.println("P4");
-        Button.waitForPress();
-        Phase4.main(args);
+        //System.out.println("P4");
+        //Button.waitForPress();
+        //Phase4.main(args);
         System.out.println("P5");
         Button.waitForPress();
         Phase5.main(args);
