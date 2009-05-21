@@ -11,7 +11,7 @@ public class Phase2 {
     public static void main(String[] args) {
         int speed = 500;
         int retspeed = 800;
-        //ActionHelper.chiptuner.start();
+        ActionHelper.chiptuner.start();
         ActionHelper.Start();
         //move forward 4 cm
         //ActionHelper.MotorGo(3, speed, 3, speed);
